@@ -1,0 +1,13 @@
+*~
+.DS_Store
+._*
+.*.ods#
+DerivedData/
+*.pbxuser
+*.xcbkptlist
+*.xcuserstate
+Breakpoints_v2.xcbkptlist
+.vscode
+**/xcuserdata/*
+.idea
+XWallet/external-libs/*

@@ -1,0 +1,366 @@
+/* InfoPlist.strings
+  XWallet
+
+  Created by loj on 03.03.19.
+  Copyright © 2019 loj. All rights reserved. */
+
+"walletView.title" = "X WALLET";
+
+"walletView.title.syncing" = "SYNCHRONISIEREN";
+
+"walletView.button.send" = "Senden";
+
+"walletView.button.receive" = "Empfangen";
+
+"walletView.emptyInformation" = "Es kann 30 Minuten oder länger dauern, bis eine Transaktion angezeigt wird. Das ist abhängig vom Netzwerk und dem verbundenen Node.\n\nFalls du schon sehr lange wartest, überprüfe das Netzwerk und die Last auf dem verbundenen Node.";
+
+"recipientView.title" = "SENDEN";
+
+"recipientView.subTitle" = "Empfängeradresse";
+
+"recipientView.instruction" = "Bitte eine Variante wählen";
+
+"recipientView.button.scanQRC" = "QR Code einlesen";
+
+"recipientView.button.paste" = "Aus Zwischenablage einfügen";
+
+"recipientView.button.sendToDeveloper" = "An Entwickler senden";
+
+"global.button.back" = "<";
+
+"receiveView.title" = "EMPFANGEN";
+
+"receiveView.button.copyToClipboard" = "Adresse in Zwischenablage kopieren";
+
+"scanView.title" = "EINLESEN";
+
+"recipientView.message.pasteboardEmpty" = "Die Zwischenablage ist leer. Bitte wechsel in eine andere App und kopiere die Zieladresse in die Zwischenablage und wechsel dann wieder hierher zurück.";
+
+"pasteFromClipboard.address" = "Zieladresse";
+
+"pasteFromClipboard.paymentId" = "Payment ID";
+
+"pasteFromClipboard.amount" = "Betrag";
+
+"pasteFromClipboard.button.accept" = "Annehmen";
+
+"global.cancel" = "Abbrechen";
+
+"global.invalidWalletAddress" = "Ungültige Wallet-Adresse";
+
+"global.invalidPaymentId" = "Ungültige Payment ID";
+
+"global.invalidAmount" = "Ungültiger Betrag";
+
+"global.invalidDescription" = "Ungültige Beschreibung";
+
+"global.ok" = "OK";
+
+"amountView.button.next" = "Weiter";
+
+"amountView.title" = "SENDEN";
+
+"amountView.balance" = "Saldo";
+
+"scan.address" = "Adresse";
+
+"amountView.estimatedFee" = "Geschätzte Gebühr";
+
+"scan.paymentId" = "Payment ID";
+
+"scan.amount" = "Betrag";
+
+"scan.accept" = "Annehmen";
+
+"scan.retake" = "Wiederholen";
+
+"paymentIdView.button.next" = "Weiter";
+
+"paymentIdView.title" = "SENDEN";
+
+"paymentIdView.subTitle" = "Payment ID";
+
+"paymentIdView.instruction" = "Bitte gib eine Payment ID ein wenn erforderlich.";
+
+"paymentIdView.paymentId.placeholder" = "Payment ID";
+
+"paymentIdView.button.pasteFromClipboard" = "Einfügen";
+
+"paymentId.invalid" = "Die Payment ID ist ungültig. Bitte korrigiere sie oder lasse sie leer.";
+
+"paymentId.invalid.fromClipboard" = "Keine gültige Payment ID in der Zwischenablage";
+
+"summaryView.title" = "SENDEN";
+
+"summaryView.subTitle" = "Zusammenfassung";
+
+"summaryView.address" = "Adresse";
+
+"summaryView.paymentId" = "Payment ID";
+
+"summaryView.subtotal" = "Subtotal";
+
+"summaryView.networkFee" = "Netzwerk-Gebühr";
+
+"summaryView.button.confirm" = "Bestätigen";
+
+"summaryView.balanceInsufficient" = "Dein Saldo ist wahrscheinlich zu klein, oder es ist ein Netzwerk-/Node-Fehler aufgetreten";
+
+"confirmView.title" = "SENDEN";
+
+"confirmView.subTitle" = "PIN eingeben";
+
+"confirmView.button.next" = "Bestätigen";
+
+"newWalletView.button.new" = "Neue Wallet";
+
+"newWalletView.button.recover" = "Wallet wiederherstellen";
+
+"pinView.title" = "X WALLET";
+
+"pinView.subTitle" = "PIN";
+
+"pinView.instruction" = "Setze eine PIN. Falls du diese PIN vergisst, musst du die Wallet von dem Seed, den du notiert hast, wiederherstellen.";
+
+"pinView.button.next" = "Weiter";
+
+"pinConfirmView.title" = "X WALLET";
+
+"pinConfirmView.subTitle" = "PIN bestätigen";
+
+"pinConfirmView.instruction" = "Bestätige deine PIN, die du vorher eingegeben hast.";
+
+"pinConfirmView.button.next" = "Weiter";
+
+"seedView.instruction" = "Notiere dir die nachfolgenden 25 Wörter.\nDas ist die einzige Möglichkeit deine Wallet wiederherzustellen, wenn du dein Gerät verlierst oder deine PIN vergisst.";
+
+"seedView.button.next" = "Erstellen";
+
+"recoverySeedView.subTitle" = "Seed importieren";
+
+"recoverySeedView.button.next" = "Erstellen";
+
+"recoverySeedView.instruction" = "Gib die 25 Seed Wörter ein.";
+
+"settingsView.title" = "EINSTELLUNGEN";
+
+"settingsView.fiat.title" = "Fiat Einheiten";
+
+"settingsView.language.title" = "Sprache";
+
+"settingsView.displayRecoverySeed.title" = "Wiederherstellungs-Seed anzeigen";
+
+"settingsView.displayRecoverySeed.subTitle" = "Verstecke den Bildschirm vor anderen";
+
+"settingsView.displayRecoverySeed.button" = "Anzeigen";
+
+"settingsView.resetPin.title" = "PIN ändern";
+
+"settingsView.resetPin.button" = "Ändern";
+
+"settingsView.tfaSupport.title" = "Zwei-Faktor-Authentisierung";
+
+"settingsView.tfaSupport.button" = "2FA Konfigurieren";
+
+"settingsView.selectNode.title" = "Node auswählen";
+
+"settingsView.selectNode.subTitle" = "Wähle einen vertrauensvollen Node";
+
+"settingsView.selectNode.button" = "Auswählen";
+
+"settingsView.nukeXWallet.title" = "X Wallet löschen";
+
+"settingsView.nukeXWallet.subTitle" = "Alle Wallet-Daten entfernen";
+
+"settingsView.nukeXWallet.button" = "Endgültig löschen";
+
+"settingsView.feedback.title" = "Feedback senden";
+
+"settingsView.feedback.button" = "X Wallet Feedback";
+
+"settingsView.feedback.messageBody" = "Hallo, ich bin ein glücklicher X Wallet-Benutzer und habe eine Frage/Verbesserungsvorschlag:\n\n";
+
+"settingsView.feedback.description" = "Besuche bitte zuerst unsere Troubleshooting Web-Page, bevor du eine Support-Anfrage stellst.";
+
+"settingsView.feedback.showFAQTitle" = "FAQ anzeigen";
+
+"settingsView.feedback.sendTitle" = "Feedback senden";
+
+"settingsView.privacy.title" = "Datenschutz";
+
+"settingsView.privacy.button" = "Datenschutz anzeigen";
+
+"fiatConversionUnitsView.title" = "WÄHRUNG";
+
+"languageView.title" = "SPRACHE";
+
+"selectNodeView.title" = "NODE AUSWÄHLEN";
+
+"selectNodeView.button.defaults" = "Vorgabe";
+
+"selectNodeView.address" = "ADRESSE";
+
+"selectNodeView.userId" = "USER ID";
+
+"selectNodeView.password" = "PASSWORT";
+
+"selectNodeView.button.connect" = "Verbinden";
+
+"revealSeed.pinView.title" = "PIN";
+
+"revealSeed.pinView.subTitle" = "PIN eingeben";
+
+"revealSeed.seedView.title" = "SEED";
+
+"nukeWallet.pinView.title" = "LÖSCHEN";
+
+"nukeWallet.pinView.subTitle" = "Wallet löschen";
+
+"nukeWallet.pinView.button.next" = "Löschen";
+
+"nukeWallet.pinView.instruction" = "Gib den PIN ein, um die Wallet zu löschen. Stelle sicher, dass du den Seed notiert hast.";
+
+"appPinView.title" = "X WALLET";
+
+"appPinView.subTitle" = "PIN eingeben";
+
+"appleWatch2faView.title" = "X WALLET";
+
+"appleWatch2faView.subTitle" = "Zwei-Faktor-Authentisierung";
+
+"appleWatch2faView.instruction" = "Benutze deine Apple Watch für die 2FA";
+
+"appleWatch2faView.button.requestAuthentication" = "Authentisierung anfordern";
+
+"appleWatch2faView.button.skipAuthentication" = "Apple Watch überspringen";
+
+"appleWatchPinView.title" = "X WALLET";
+
+"appleWatchPinView.subTitle" = "Gib den Apple Watch 2FA PIN ein";
+
+"appleWatch2faView.message.failed" = "Bitte fordere erneut die Authentisierung von deiner Apple Watch.\n\nFalls es weiterhin nicht funktioniert, überspringe die Authentisierung mit deiner Apple Watch und gebe die 2FA PIN ein.";
+
+"appleWatch2faView.message.notAvailable" = "Die Zwei-Faktor-Authentisierung ist nicht verfügbar\n\nHast du X Wallet auf deiner Apple Watch deinstalliert?\n\nDie einzige Möglichkeit zum Fortfahren ist, die Apple Watch Authentisierung zu überspringen und die 2FA PIN einzugeben,";
+
+"appleWatch2faView.message.title" = "Authentisierung fehlgeschlagen";
+
+"configure2faView.title" = "Zwei-Faktor-Authentisierung";
+
+"configure2faView.subTitle" = "Apple Watch";
+
+"configure2faView.unbound.button" = "Apple Watch 2FA aktivieren";
+
+"configure2faView.unbound.instruction" = "Du kannst deine Apple Watch für die Zwei-Faktor-Authentisierung aktivieren.";
+
+"configure2faView.bound.button" = "Apple Watch 2FA deaktivieren";
+
+"configure2faView.bound.instruction" = "Deine Apple Watch wird für die Zwei-Faktor-Authentisierung benötigt.";
+
+"configure2fa.newPinView.title" = "2FA";
+
+"configure2fa.newPinView.subTitle" = "Zwei-Faktor-Authentisierung";
+
+"configure2fa.newPinView.instruction" = "Setze eine PIN, den du benutzen kannst, wenn deine Apple Watch nicht erreichbar ist, oder du versehentlich X Wallet von deiner Apple Watch gelöscht hast.";
+
+"configure2fa.newPinView.button.next" = "Weiter";
+
+"configure2fa.askForPinView.title" = "2FA";
+
+"configure2fa.askForPinView.subTitle" = "Zwei-Faktor-Authentisierung";
+
+"configure2fa.askForPinView.instruction" = "Gib deine Apple Watch 2FA PIN ein, um Apple Watch 2FA zu deaktivieren.";
+
+"configure2fa.askForPinView.button.next" = "Weiter";
+
+"configure2fa.notSupported.title" = "Nicht unterstützt";
+
+"configure2fa.notSupported.message" = "Die Zwei-Faktor-Authentisierung wird auf deinem Gerät nicht unterstützt.";
+
+"configure2fa.notInstalled.title" = "App nicht installiert";
+
+"configure2fa.notInstalled.message" = "Du musst X Wallet auf deiner Apple Watch installieren um die Zwei-Faktor-Authentisierung benutzen zu können.";
+
+"configure2fa.confirmPinView.title" = "2FA";
+
+"configure2fa.confirmPinView.subTitle" = "Zwei-Faktor-Authentisierung";
+
+"configure2fa.confirmPinView.instruction" = "Wiederhole die PIN, die du vorher eingeben hast.";
+
+"configure2fa.confirmPinView.button.next" = "Weiter";
+
+"changePin.checkPinView.title" = "PIN ZURÜCKSETZEN";
+
+"changePin.checkPinView.subTitle" = "Aktuelle PIN";
+
+"changePin.checkPinView.button.next" = "Weiter";
+
+"changePin.checkPinView.instruction" = "Gib bitte deine aktuelle PIN ein";
+
+"changePin.newPinView.title" = "PIN ZURÜCKSETZEN";
+
+"changePin.newPinView.subTitle" = "Neue PIN";
+
+"changePin.newPinView.instruction" = "Setze eine neue PIN. Wenn du diese PIN vergisst, musst du deine Wallet mit dem Seed, den du notiert hast, wiederherstellen.";
+
+"changePin.newPinView.button.next" = "Weiter";
+
+"changePin.verifyPinView.title" = "PIN ZURÜCKSETZEN";
+
+"changePin.verifyPinView.subTitle" = "PIN überprüfen";
+
+"changePin.verifyPinView.button.next" = "Weiter";
+
+"changePin.verifyPinView.instruction" = "Bestätige deine neue PIN, die du zuvor eingegegen hast.";
+
+"summaryView.total" = "Total";
+
+"seedView.title" = "X WALLET";
+
+"seedView.subTitle" = "Seed";
+
+"age.never" = "nie";
+
+"age.recent" = "soeben";
+
+"age.moreThan10MinutesAgo" = "vor mehr als 10 Minuten";
+
+"age.moreThen1HourAgo" = "vor mehr als 1 Stunde";
+
+"age.moreThan1DayAgo" = "vor mehr als 1 Tag";
+
+"transactionDirection.sent" = "gesendet";
+
+"transactionDirection.received" = "empfangen";
+
+"trxState.pending" = "pendent";
+
+"trxState.failed" = "fehlgeschlagen";
+
+"global.confirmations" = "Bestätigungen";
+
+"language.en" = "Englisch";
+
+"language.de" = "Deutsch";
+
+"language.ru-RU" = "Russisch";
+
+"appleWatch2faView.message.processing" = "Warte auf Authorisationsantwort von deiner Apple Watch";
+
+"scanView.notSupported.title" = "Scannen nicht unterstützt";
+
+"scanView.notSupported.message" = "Benutze bitte ein Gerät mit Kamera und erlaube die Benutzung der Kamera.";
+
+"settingsView.emailFailed.message" = "Dein Gerät kann keine E-Mail senden.\nBitte überprüfe die E-Mail-Einstellungen und versuche es erneut.";
+
+"settingsView.emailFailed.title" = "Kann E-Mail nicht senden";
+
+"legal.button.accept" = "Ich habe alles verstanden und akzeptiere";
+
+"legal.button.decline" = "Ich lehne ab";
+
+"legal.decline.text" = "Es tut uns leid, aber wenn du mit den Bedingungen nicht einverstanden bist, musst du X Wallet beenden.";
+
+"legal.title" = "Haftungsausschluss";
+
+"newWalletView.keychainLost" = "Es tut uns sehr leid, aber ...\n\nTL;DR Die Keychain, in der X Wallet den verschlüsselt PIN abspeichert, ist nicht mehr zugänglich. Du musst eine neue Wallet anlegen oder eine vorherige wiederherstellen.\n\nWARUM??? Wir haben X Wallet von einem App Store Account in einen anderen migriert. Das erzeugt leider eine neue App Id. Und dass verhindert den Zugriff auf die Keychain der vorherigen App Id.";
+
