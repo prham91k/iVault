@@ -1,0 +1,51 @@
+v1.0
+
+
+A six digit PIN is used to control access to your X Wallet.
+A 25 word seed mnemonic is generated when you initialize your X Wallet. This  seed is compatible with the Monero reference client software.
+View your balance and transaction history.
+Send Monero with an optional Payment ID, for transfers to exchanges and other account-based services. Send via QR code scan or by copying and pasting an address.
+Receive Monero via QR code or by copying and pasting your wallet address to a messaging app.
+
+
+v1.1
+
+
+Connect to the remote node of your choice.
+Quickly delete all application data.
+Change your PIN
+View your seed mnemonic
+
+
+v1.2
+
+
+Added fiat conversion reference (CHF, EUR, GBP, USD)
+Upgraded default remote node hardware: 16GB/6vCPU
+Upgraded libraries to Monero v0.12
+Built for iOS 11.3
+
+
+v1.3
+
+
+Send now notifies you if you try to send more than your balance.
+
+
+v1.4
+
+
+Modified the previous notification.
+
+
+v1.5
+
+
+Send now displays the estimated fee and computes the total amount you can send.
+
+
+v1.6
+
+
+Added support for all available fiat currencies.
+Added support for QR codes containing both payment ID and amount. 
