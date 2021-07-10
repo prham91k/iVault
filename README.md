@@ -1,4 +1,4 @@
-# Scala Vault
+# Scala  iVault
 
 A secure and light weight wallet to store your Scala coins on ios device.
 
