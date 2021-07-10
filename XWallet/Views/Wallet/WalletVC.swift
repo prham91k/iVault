@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol WalletVCDelegate: class {
+protocol WalletVCDelegate: AnyObject {
     func walletVCSettingsButtonTouched()
     func walletVCSendTouched()
     func walletVCReceiveTouched()
@@ -56,7 +56,7 @@ class WalletVC: UIViewController {
     
     private var syncIsInProgress = false
     private var hasLockedBalance = false
-
+    private var previousHeight = Double(0)
     public func refresh() {
         self.updateControls()
     }
@@ -74,6 +74,13 @@ class WalletVC: UIViewController {
         let max = Double(blockChainHeight)
         let current = Double(walletHeight)
         
+//        Debug.print(s: "Current Height current \(current) Previous Height \(previousHeight)");
+        
+//        if(current.isLess(than: self.previousHeight) || current.isEqual(to: self.previousHeight)) {
+//            return;
+//        }
+//
+//        self.previousHeight = current;
         var percent = Int((current - min) / (max - min) * 100.0)
         if percent > 99 {
             percent = 99
@@ -189,6 +196,7 @@ class WalletVC: UIViewController {
         }
 
         xmrAmountLabel.text = viewModel.xmrAmount
+       
         otherAmountLabel.text = "\(viewModel.otherCurrency) \(viewModel.otherAmount)"
         historyTableView.reloadData()
     }
@@ -257,7 +265,7 @@ extension WalletVC: UITableViewDataSource {
         cell.direction = cellData.direction
         cell.isPending = cellData.isPending
         cell.isFailed = cellData.isFailed
-        cell.trxAmount = cellData.readableAmountWithNetworkFee()
+        cell.trxAmount = cellData.readableAmountWithNetworkFee()+" XLA"
         cell.confirmations = cellData.confirmations
         cell.trxTimestamp = cellData.readableTimestamp()
         cell.localizer = self.localizer

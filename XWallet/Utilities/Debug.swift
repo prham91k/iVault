@@ -12,6 +12,6 @@ public class Debug {
     
     public static func print(s: String) {
 //        let warning = "disable for relase version"
-//        Swift.print(s)
+        Swift.print(s)
     }
 }

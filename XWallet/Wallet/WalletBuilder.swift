@@ -120,7 +120,7 @@ public class WalletBuilder: WalletBuilderProtocol {
     private func pathWithFileName() -> String {
         let documentPath = self.fileHandling.documentPath()
         let pathWithFileName = documentPath + self.walletName
-        print("### WALLET LOCATION: \(pathWithFileName)")
+        Debug.print(s: "### WALLET LOCATION: \(pathWithFileName)")
         
         return pathWithFileName
     }

@@ -68,7 +68,7 @@ public class PinVC: UIViewController, ActivityIndicatorEnabled {
     private func setup() {
         self.pinDotView.totalDotCount = Constants.pinCodeLength
         self.pinDotView.inputDotCount = 0
-        self.pinDotView.fillColor = .black
+        self.pinDotView.fillColor = .label
         
         self.nextButton.isEnabled = false
     }
@@ -146,10 +146,14 @@ extension PinVC : UIKeyInput {
         }
         
         self.pinDotView.shakeAnimationWithCompletion {}
+        self.pinCode.removeAll()
+        self.pinDotView.inputDotCount = 0
+        self.nextButton.isEnabled = false
+
     }
     
     public func deleteBackward() {
-        if self.pinCode.count > 0 {
+        if self.hasText {
             self.pinCode = String(self.pinCode.dropLast())
             self.pinDotView.inputDotCount -= 1
         }

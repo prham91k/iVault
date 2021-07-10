@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol WalletCoordinatorDelegate: class {
+public protocol WalletCoordinatorDelegate: AnyObject {
     func walletCoordinatorWalletNuked(walletCoordinator: WalletCoordinator)
 }
 
@@ -95,7 +95,7 @@ public class WalletCoordinator: Coordinator {
             return nil
         }
         
-        let xmrBalance = XMRFormatter.format(atomicAmount: wallet.balance,
+        let xmrBalance = CoinFormatter.format(atomicAmount: wallet.balance,
                                              numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
         let history = wallet.history
         let hasLockedBalance = wallet.balance != wallet.unlockedBalance
@@ -344,12 +344,12 @@ extension WalletCoordinator: ReceipientVCDelegate {
         vc.backButtonTitle = self.localizer.localized("global.button.back")
         vc.nextButtonTitle = self.localizer.localized("amountView.button.next")
         vc.viewTitle = self.localizer.localized("amountView.title")
-        vc.currencyText = "XMR"
+        vc.currencyText = "XLA"
         vc.amountText = String(self.moneroBag.payment?.amountInAtomicUnits?.toXMR() ?? Double(0.0))
         vc.amountOtherText = "\(self.propertyStore.currency) \(self.otherAmount(forXMRValue: 0))"
         
         let formattedAmounts = self.formattedAmounts()
-        vc.totalAmountAvailableButtonTitle = "XMR \(formattedAmounts.available)"
+        vc.totalAmountAvailableButtonTitle = "XLA \(formattedAmounts.available)"
         vc.balanceTitle = self.localizer.localized("amountView.balance")
         vc.balanceValueText = formattedAmounts.balance
         vc.estimatedFeeTitle = self.localizer.localized("amountView.estimatedFee")
@@ -385,9 +385,9 @@ extension WalletCoordinator: ReceipientVCDelegate {
     private func formattedAmounts() -> (balance: String, fee: String, available: String) {
         let amounts = self.amounts()
         
-        let balanceFormatted = XMRFormatter.format(atomicAmount: amounts.balance, numberOfFractionDigits: Constants.numberOfFractionDigits)
-        let feeFormatted = XMRFormatter.format(atomicAmount: amounts.fee, numberOfFractionDigits: Constants.numberOfFractionDigits)
-        let availableFormatted = XMRFormatter.format(atomicAmount: amounts.available, numberOfFractionDigits: Constants.numberOfFractionDigits)
+        let balanceFormatted = CoinFormatter.format(atomicAmount: amounts.balance, numberOfFractionDigits: Constants.numberOfFractionDigits)
+        let feeFormatted = CoinFormatter.format(atomicAmount: amounts.fee, numberOfFractionDigits: Constants.numberOfFractionDigits)
+        let availableFormatted = CoinFormatter.format(atomicAmount: amounts.available, numberOfFractionDigits: Constants.numberOfFractionDigits)
 
         return (balance: balanceFormatted, fee: feeFormatted, available: availableFormatted)
     }
@@ -462,7 +462,7 @@ extension WalletCoordinator: AmountVCDelegate {
     }
     
     func amountVCNextButtonTouched(formattedAmount: String, viewController: AmountVC) {
-        self.moneroBag.payment?.amountInAtomicUnits = XMRFormatter.fromFormatted(amount: formattedAmount)
+        self.moneroBag.payment?.amountInAtomicUnits = CoinFormatter.fromFormatted(amount: formattedAmount)
         self.showPaymentIdViewController()
     }
     
@@ -542,6 +542,7 @@ extension WalletCoordinator: PaymentIdVCDelegate {
                                                amount,
                                                Constants.mixinCount,
                                                Constants.defaultTransactionPriority)
+            Debug.print(s: "Sending amount :\(amount)")
             self.moneroBag.payment?.keyOfPendingTransaction = key
             let networkFee = monero_getTransactionFee(key)
             self.moneroBag.payment?.networkFeeInAtomicUnits = networkFee < 0 ? UInt64(0) : UInt64(networkFee)
@@ -584,33 +585,35 @@ extension WalletCoordinator: PaymentIdVCDelegate {
         vc.paymentIdText = self.localizer.localized("summaryView.paymentId")
         vc.paymentIdValueText = self.moneroBag.payment?.paymentId ?? "---"
         vc.subtotalText = self.localizer.localized("summaryView.subtotal")
-        let amount = XMRFormatter.format(atomicAmount: self.moneroBag.payment?.amountInAtomicUnits ?? 0,
+        let amount = CoinFormatter.format(atomicAmount: self.moneroBag.payment?.amountInAtomicUnits ?? 0,
                                          numberOfFractionDigits: Constants.numberOfFractionDigits)
-        vc.subtotalValueText = "XMR \(amount)"
+        vc.subtotalValueText = "XLA \(amount)"
         vc.networkFeeText = self.localizer.localized("summaryView.networkFee")
-        let networkFee = XMRFormatter.format(atomicAmount: self.moneroBag.payment?.networkFeeInAtomicUnits ?? 0,
+        let networkFee = CoinFormatter.format(atomicAmount: self.moneroBag.payment?.networkFeeInAtomicUnits ?? 0,
                                              numberOfFractionDigits: Constants.numberOfFractionDigits)
-        vc.networkFeeValueText = "XMR \(networkFee)"
+        vc.networkFeeValueText = "XLA \(networkFee)"
         vc.confirmButtonTitle = self.localizer.localized("summaryView.button.confirm")
         vc.totalText = self.localizer.localized("summaryView.total")
-        let totalAmount = XMRFormatter.format(atomicAmount: self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0,
+        let totalAmount = CoinFormatter.format(atomicAmount: self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0,
                                               numberOfFractionDigits: Constants.numberOfFractionDigits)
-        vc.totalValueText = "XMR \(totalAmount)"
+        vc.totalValueText = "XLA \(totalAmount)"
         vc.balanceIsSufficient = self.balanceIsSufficient()
         vc.balanaceInsufficientText = self.localizer.localized("summaryView.balanceInsufficient")
         self.navigationController.pushViewController(vc, animated: true)
     }
     
     private func balanceIsSufficient() -> Bool {
+        let available = self.moneroBag.wallet?.balance ?? 0
+        let requested = self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0
+        
+        Debug.print(s: "A: \(available) R: \(requested) P: \(self.moneroBag.payment?.keyOfPendingTransaction)")
+
         guard let key = self.moneroBag.payment?.keyOfPendingTransaction else {
             return false
         }
         if key < 0 {
             return false
         }
-        
-        let available = self.moneroBag.wallet?.balance ?? 0
-        let requested = self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0
         
         return available >= requested
     }

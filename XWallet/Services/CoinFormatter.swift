@@ -8,13 +8,13 @@
 import Foundation
 
 
-public protocol XMRFormatterProtocol {
+public protocol CoinFormatterProtocol {
     static func format(atomicAmount: UInt64, numberOfFractionDigits: Int) -> String
     static func fromFormatted(amount: String) -> UInt64
 }
 
 
-public class XMRFormatter: XMRFormatterProtocol {
+public class CoinFormatter: CoinFormatterProtocol {
     
     static public func format(atomicAmount: UInt64, numberOfFractionDigits: Int) -> String {
         let moneros = NSNumber(value: Double(atomicAmount) / Double(Constants.atomicUnitsPerMonero))
@@ -22,6 +22,8 @@ public class XMRFormatter: XMRFormatterProtocol {
         guard let formatted = formatter.string(from: moneros) else {
             return ""
         }
+        //Debug.print(s:" The amount formated \(formatted) from \(atomicAmount)")
+
         return formatted
     }
     
@@ -29,8 +31,7 @@ public class XMRFormatter: XMRFormatterProtocol {
         let decimalSeparator = Locale.current.decimalSeparator ?? "."
 
         var atomicUnits = ""
-
-        var parts = amount.components(separatedBy: decimalSeparator)
+        let parts = amount.components(separatedBy: decimalSeparator)
         if parts.count == 1 {
             atomicUnits = parts[0] + atomicUnitsZeros
         } else if parts.count == 2 {
@@ -42,7 +43,7 @@ public class XMRFormatter: XMRFormatterProtocol {
         return UInt64(atomicUnits) ?? 0
     }
     
-    private static let atomicUnitsPerMoneroLength = 12
+    private static let atomicUnitsPerMoneroLength = 2
     private static let atomicUnitsZeros = String(repeating: "0", count: atomicUnitsPerMoneroLength)
 //    private static let exactNumberOfFractionDigits = 5
     

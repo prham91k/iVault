@@ -27,4 +27,8 @@ public class Colors {
                                                        text: Color(color: UIColor.white, alpha: 1.0))
     public static let warningButtonColor = ButtonColor(background: Color(color: UIColor(rgb: 0xFF8989), alpha: 1.0),
                                                        text: Color(color: UIColor.white, alpha: 1.0))
+    
+    public static let defaultLabelDark =  UIColor.white
+    public static let defaultLabelLight =  UIColor.black
+
 }

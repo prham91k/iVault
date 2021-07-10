@@ -63,7 +63,7 @@ public class TransactionCell: UITableViewCell {
         self.trxAmountLabel.text?.append(amountDescription)
         self.trxAmountLabel.text?.append(isPendingDescription)
         self.trxAmountLabel.text?.append(isFailedDescription)
-        
+        //Debug.print(s: "### A: \(amountDescription) P: \(isPendingDescription) F: \(isFailedDescription) T : \(trxAmount)")
         self.showConfirmations()
     }
     

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,10 +21,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSn-Na-7d5" userLabel="NavBar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="fNd-k3-5PK"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Dg-xL-d8m">
+                                <rect key="frame" x="20" y="114" width="374" height="728"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!LEGAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-O8-N5o" userLabel="Label">
-                                        <rect key="frame" x="176.5" y="11.5" width="61.5" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="AcZ-hm-lR0"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="C5b-UG-bYh"/>
@@ -34,28 +40,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="hSy-O8-N5o" firstAttribute="centerX" secondItem="VSn-Na-7d5" secondAttribute="centerX" id="d3N-hK-nBm"/>
-                                    <constraint firstAttribute="height" constant="44" id="fNd-k3-5PK"/>
-                                    <constraint firstItem="hSy-O8-N5o" firstAttribute="centerY" secondItem="VSn-Na-7d5" secondAttribute="centerY" id="tNK-jf-Ovj"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Dg-xL-d8m">
-                                <rect key="frame" x="20" y="100" width="374" height="742"/>
-                                <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxI-5n-0zd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="610"/>
+                                        <rect key="frame" x="0.0" y="41" width="374" height="555"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium </string>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8po-cR-aKs" userLabel="Buttons">
-                                        <rect key="frame" x="0.0" y="630" width="374" height="112"/>
+                                        <rect key="frame" x="0.0" y="616" width="374" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-Tl-APG" customClass="XWButton" customModule="XWallet" customModuleProvider="target">
+                                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-Tl-APG" customClass="XWButton" customModule="XWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -69,7 +65,7 @@
                                                     <action selector="acceptButtonTouched" destination="kpz-NM-2G6" eventType="touchUpInside" id="esF-3G-9Np"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-18-IDW" userLabel="Decline Button" customClass="XWButton" customModule="XWallet" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-18-IDW" userLabel="Decline Button" customClass="XWButton" customModule="XWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="374" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -88,6 +84,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NVG-aG-uyb"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="top" secondItem="VSn-Na-7d5" secondAttribute="bottom" constant="12" id="AaP-mn-JyO"/>
@@ -102,7 +99,6 @@
                             <constraint firstItem="NVG-aG-uyb" firstAttribute="bottom" secondItem="0Dg-xL-d8m" secondAttribute="bottom" constant="20" id="jO2-C5-gAf"/>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="leading" secondItem="feN-d6-oPu" secondAttribute="leadingMargin" id="sh8-ho-A5R"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="NVG-aG-uyb"/>
                     </view>
                     <connections>
                         <outlet property="acceptButton" destination="fPi-Tl-APG" id="iSn-jR-zwF"/>
@@ -113,10 +109,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKn-2C-LUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5999999999999" y="67.980295566502463"/>
+            <point key="canvasLocation" x="1597.1014492753625" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

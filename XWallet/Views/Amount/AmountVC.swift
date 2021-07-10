@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol AmountVCDelegate: class {
+protocol AmountVCDelegate: AnyObject {
     func amountVCBackTouched()
     func amountVCNextButtonTouched(formattedAmount: String, viewController: AmountVC)
     func amountVCTotalAmountButtonTouched(viewController: AmountVC)

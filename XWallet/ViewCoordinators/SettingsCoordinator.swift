@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol SettingsCoordinatorDelegate: class {
+public protocol SettingsCoordinatorDelegate: AnyObject {
     func settingsCoordinatorSettingsCompleted(settingsCoordinator: SettingsCoordinator)
     func settingsCoordinatorWalletNuked(settingsCoordinator: SettingsCoordinator)
     func settingsCoordinatorLanguageDidChange(settingsCoordinator: SettingsCoordinator)

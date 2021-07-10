@@ -45,8 +45,10 @@ public struct TransactionItem {
             totalInAtomicUnits = self.amount + self.networkFee
         }
             
-        let floatAmount: Double = Double(totalInAtomicUnits) / 1e12
-        return String(format: "%0.05f", floatAmount)
+//        let floatAmount: Double = Double(totalInAtomicUnits) / 1e12
+//        return String(format: "%0.05f", floatAmount)
+
+        return CoinFormatter.format(atomicAmount: totalInAtomicUnits, numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
     }
     
     private func readableAmount() -> String {

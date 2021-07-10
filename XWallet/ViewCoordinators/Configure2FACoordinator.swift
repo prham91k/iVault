@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol Configure2FACoordinatorDelegate: class {
+public protocol Configure2FACoordinatorDelegate: AnyObject {
     func configure2FACoordinatorDone(configure2FACoordinator: Configure2FACoordinator)
 }
 

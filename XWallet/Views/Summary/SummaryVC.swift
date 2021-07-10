@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol SummaryVCDelegate: class {
+protocol SummaryVCDelegate: AnyObject {
     func summaryVCBackButtonTouched()
     func summaryVCConfirmButtonTouched()
 }

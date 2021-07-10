@@ -58,7 +58,7 @@ public class ActivityIndicatorHUD: ActivityIndicatorHUDProtocol {
         let h = self.height / 2.0
         
         let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: x, y: y, width: w, height: h))
-        activityIndicator.style = .whiteLarge
+        activityIndicator.style = .large
         activityIndicator.color = UIColor.darkGray
         activityIndicator.startAnimating()
         

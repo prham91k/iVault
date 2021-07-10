@@ -29,7 +29,7 @@
 		EE0DB7FE1F2FA7C000E1342A /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0DB7FD1F2FA7C000E1342A /* OnboardingService.swift */; };
 		EE106FF81F50AE06004AD295 /* String-ExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE106FF71F50AE06004AD295 /* String-ExtensionTest.swift */; };
 		EE1831D81FD09BFB0072C149 /* WalletLifecycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1831D71FD09BFB0072C149 /* WalletLifecycleService.swift */; };
-		EE1831DA1FD0B7800072C149 /* XMRFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1831D91FD0B7800072C149 /* XMRFormatter.swift */; };
+		EE1831DA1FD0B7800072C149 /* CoinFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1831D91FD0B7800072C149 /* CoinFormatter.swift */; };
 		EE1DBA8A1FD2E75800475E2E /* moneroWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE5D01A91F436FCC00E41AED /* moneroWrapper.cpp */; };
 		EE1DBA8C1FD3FA7200475E2E /* InteropConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DBA8B1FD3FA7200475E2E /* InteropConverter.swift */; };
 		EE214359222BE75900F3902D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE21435B222BE75900F3902D /* InfoPlist.strings */; };
@@ -185,6 +185,16 @@
 		5CC2507E2658C31900B67102 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_serialization.a; path = "XWallet/external-libs/boost/libboost_serialization.a"; sourceTree = "<group>"; };
 		5CC2507F2658C31900B67102 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = "XWallet/external-libs/boost/libboost_thread.a"; sourceTree = "<group>"; };
 		5CC250802658C31900B67102 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "XWallet/external-libs/boost/libboost_filesystem.a"; sourceTree = "<group>"; };
+		5CE191882675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/2FA.storyboard; sourceTree = "<group>"; };
+		5CE191892675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Configure2FA.storyboard; sourceTree = "<group>"; };
+		5CE1918A2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5CE1918B2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XWallet/Base.lproj/Legal.storyboard; sourceTree = "<group>"; };
+		5CE1918C2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
+		5CE1918D2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectNode.storyboard; sourceTree = "<group>"; };
+		5CE1918E2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		5CE1918F2675C00C008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SingleSelectTableView.storyboard; sourceTree = "<group>"; };
+		5CE191902675C00C008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Wallet.storyboard; sourceTree = "<group>"; };
+		5CE191912675C00C008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		EE0A6F9820552C6500682F12 /* FiatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatService.swift; sourceTree = "<group>"; };
 		EE0A6F9A2055335B00682F12 /* FiatServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatServiceTest.swift; sourceTree = "<group>"; };
 		EE0A6F9D205BDA0800682F12 /* FiatAgeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatAgeTest.swift; sourceTree = "<group>"; };
@@ -193,17 +203,8 @@
 		EE0DB7FD1F2FA7C000E1342A /* OnboardingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingService.swift; path = Onboarding/OnboardingService.swift; sourceTree = "<group>"; };
 		EE106FF71F50AE06004AD295 /* String-ExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-ExtensionTest.swift"; path = "ExtensionsTests/String-ExtensionTest.swift"; sourceTree = "<group>"; };
 		EE1831D71FD09BFB0072C149 /* WalletLifecycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletLifecycleService.swift; sourceTree = "<group>"; };
-		EE1831D91FD0B7800072C149 /* XMRFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMRFormatter.swift; sourceTree = "<group>"; };
+		EE1831D91FD0B7800072C149 /* CoinFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFormatter.swift; sourceTree = "<group>"; };
 		EE1DBA8B1FD3FA7200475E2E /* InteropConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteropConverter.swift; sourceTree = "<group>"; };
-		EE21434E222BE4F900F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Configure2FA.storyboard; sourceTree = "<group>"; };
-		EE21434F222BE4FA00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/SingleSelectTableView.storyboard; sourceTree = "<group>"; };
-		EE214350222BE4FA00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Wallet.storyboard; sourceTree = "<group>"; };
-		EE214351222BE4FB00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		EE214352222BE4FC00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/SelectNode.storyboard; sourceTree = "<group>"; };
-		EE214353222BE4FD00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EE214354222BE4FE00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/2FA.storyboard; sourceTree = "<group>"; };
-		EE214355222BE4FF00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Settings.storyboard; sourceTree = "<group>"; };
-		EE214356222BE4FF00F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		EE21435A222BE75900F3902D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE21435C222BE78800F3902D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE21435E222BE84700F3902D /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -453,7 +454,6 @@
 		EEF096C820650D4F00012E82 /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		EEF096C920650D4F00012E82 /* UInt64-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64-Extension.swift"; sourceTree = "<group>"; };
 		EEF096CC20650D6100012E82 /* Double-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extension.swift"; sourceTree = "<group>"; };
-		EEFA06F822E5B971007FA3E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = XWallet/en.lproj/Legal.storyboard; sourceTree = "<group>"; };
 		EEFA06FB22E5BACF007FA3E5 /* LegalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalVC.swift; sourceTree = "<group>"; };
 		EEFD670E1FC1EE9D0011D409 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		EEFD67101FC1F53D0011D409 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
@@ -1560,7 +1560,7 @@
 				EE392476202CFBDE00266B29 /* KeychainWrapper.swift */,
 				EE39247A202E2B5F00266B29 /* PasswordGenerator.swift */,
 				EE1831D71FD09BFB0072C149 /* WalletLifecycleService.swift */,
-				EE1831D91FD0B7800072C149 /* XMRFormatter.swift */,
+				EE1831D91FD0B7800072C149 /* CoinFormatter.swift */,
 				EE9356E5210F099A00DFDD07 /* WatchCommunicationService.swift */,
 				EE947FD32111BA9D00D6F1D0 /* TwoFactorAuthenticationService.swift */,
 				EE947FD521120CC000D6F1D0 /* NotificationService.swift */,
@@ -1631,7 +1631,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = loj;
 				TargetAttributes = {
 					EEE1D4FD1F29153400D464C3 = {
@@ -1650,13 +1650,13 @@
 			};
 			buildConfigurationList = EEE1D4F91F29153400D464C3 /* Build configuration list for PBXProject "XWallet" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				de,
 				"ru-RU",
+				Base,
 			);
 			mainGroup = EEE1D4F51F29153400D464C3;
 			productRefGroup = EEE1D4FF1F29153400D464C3 /* Products */;
@@ -1741,7 +1741,7 @@
 				EE512A8B20E8CA75000EDBC3 /* TableViewDataSource.swift in Sources */,
 				EE49D9C6201BA531009582A6 /* RevealSeedCoordinator.swift in Sources */,
 				EEDA173A1FBA332300998BE1 /* RecoverSeedVC.swift in Sources */,
-				EE1831DA1FD0B7800072C149 /* XMRFormatter.swift in Sources */,
+				EE1831DA1FD0B7800072C149 /* CoinFormatter.swift in Sources */,
 				EE6D88672064F811003B9149 /* DateProvider.swift in Sources */,
 				EE49D9C8201DE26A009582A6 /* ChangePinCoordinator.swift in Sources */,
 				EE76C8901FDD9E190075C45D /* PaymentIdVC.swift in Sources */,
@@ -1841,7 +1841,7 @@
 		EE39246720225B7600266B29 /* SelectNode.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214352222BE4FC00F3902D /* en */,
+				5CE1918D2675C00B008348D8 /* Base */,
 			);
 			name = SelectNode.storyboard;
 			sourceTree = "<group>";
@@ -1849,7 +1849,7 @@
 		EE47CA361FBDFEB200FC98E9 /* Wallet.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214350222BE4FA00F3902D /* en */,
+				5CE191902675C00C008348D8 /* Base */,
 			);
 			name = Wallet.storyboard;
 			sourceTree = "<group>";
@@ -1857,7 +1857,7 @@
 		EE737AAC20149B810069F341 /* Settings.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214355222BE4FF00F3902D /* en */,
+				5CE1918E2675C00B008348D8 /* Base */,
 			);
 			name = Settings.storyboard;
 			sourceTree = "<group>";
@@ -1865,7 +1865,7 @@
 		EE737ABF20165FC30069F341 /* SingleSelectTableView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE21434F222BE4FA00F3902D /* en */,
+				5CE1918F2675C00C008348D8 /* Base */,
 			);
 			name = SingleSelectTableView.storyboard;
 			sourceTree = "<group>";
@@ -1873,7 +1873,7 @@
 		EE7692D321209C0A008938E6 /* Configure2FA.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE21434E222BE4F900F3902D /* en */,
+				5CE191892675C00B008348D8 /* Base */,
 			);
 			name = Configure2FA.storyboard;
 			sourceTree = "<group>";
@@ -1881,7 +1881,7 @@
 		EE9356E7210F758600DFDD07 /* 2FA.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214354222BE4FE00F3902D /* en */,
+				5CE191882675C00B008348D8 /* Base */,
 			);
 			name = 2FA.storyboard;
 			sourceTree = "<group>";
@@ -1971,7 +1971,7 @@
 		EEC9D6B620FB9D410057B9C4 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214351222BE4FB00F3902D /* en */,
+				5CE191912675C00C008348D8 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1979,7 +1979,7 @@
 		EEE1D5051F29153400D464C3 /* Onboarding.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214356222BE4FF00F3902D /* en */,
+				5CE1918C2675C00B008348D8 /* Base */,
 			);
 			name = Onboarding.storyboard;
 			sourceTree = "<group>";
@@ -1987,7 +1987,7 @@
 		EEE1D50A1F29153400D464C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE214353222BE4FD00F3902D /* en */,
+				5CE1918A2675C00B008348D8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1995,7 +1995,7 @@
 		EEFA06F722E5B971007FA3E5 /* Legal.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EEFA06F822E5B971007FA3E5 /* en */,
+				5CE1918B2675C00B008348D8 /* Base */,
 			);
 			name = Legal.storyboard;
 			sourceTree = "<group>";
@@ -2029,6 +2029,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2089,6 +2090,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2126,7 +2128,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = XWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2159,7 +2161,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = XWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SingleSelectionTableViewVCProtocol: class {
+protocol SingleSelectionTableViewVCProtocol: AnyObject {
     func singleSelectionTableViewVCBackButtonTouched()
 }
 

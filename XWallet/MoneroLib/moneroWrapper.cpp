@@ -10,12 +10,7 @@
 #include "moneroWrapper.h"
 #include "Wallet2_api.h"
 #include <map>
-#ifdef __clang__
-extern void __clear_cache(char *beg, char *end);
-#define CLEAR_CACHE __clear_cache
-#else
-#define CLEAR_CACHE __builtin___clear_cache
-#endif
+
 const Scala::NetworkType networkType = Scala::MAINNET;
 
 static Scala::Wallet* monero_wallet;
@@ -80,7 +75,7 @@ private:
 
 static WalletListernerImplementation* monero_walletListener = nullptr;
 
-Scala::WalletManagerFactory::LogLevel monero_logLevel = Scala::WalletManagerFactory::LogLevel_Silent;
+Scala::WalletManagerFactory::LogLevel monero_logLevel = Scala::WalletManagerFactory::LogLevel_4;
 
 bool monero_createWalletFromScatch(const char* pathWithFileName,
                                    const char* password,
@@ -317,6 +312,7 @@ monero_history* monero_getTrxHistory() {
         trx->fee = transactionInfo->fee();
         trx->confirmations = transactionInfo->confirmations();
         trx->timestamp = transactionInfo->timestamp();
+        //std::cout << "Transaction amount : " << trx->amount << '\n';
         moneroHistory->transactions[i] = trx;
     }
     
@@ -367,7 +363,9 @@ int64_t monero_createTransaction(const char* dstAddress,
                                  uint32_t mixinCount,
                                  enum monero_pendingTransactionPriority priority)
 {
+    
     if (!monero_wallet) {
+        std::cout << "ERROR MONERO WALLET NOT FOUND" << "\n";
         return -1;
     }
     
@@ -379,9 +377,12 @@ int64_t monero_createTransaction(const char* dstAddress,
      (Scala::PendingTransaction::Priority)priority);
     
     if (!pendingTransaction) {
+        std::cout << "ERROR NO PENDING TRANSACTION" << "\n";
         return -1;
     }
     if (pendingTransaction->status() != Status_Ok) {
+        std::cout << "ERROR PENDING TRANSACTION STATUS NOT OK "  << pendingTransaction->status() << "\n";
+        std::cout << monero_errorString() << "\n";
         return -1;
     }
 

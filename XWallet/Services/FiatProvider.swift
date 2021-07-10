@@ -33,7 +33,7 @@ public class FiatProvider: FiatProviderProtocol {
                     let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
                     
                     if let json = jsonResponse
-                        , let xmrNode = json["XMR"] as? [String:Any]
+                        , let xmrNode = json["XLA"] as? [String:Any]
                         , let fiatValue = xmrNode[currency] as? Double
                     {
                         completionHandler(fiatValue, currency)

@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol PaymentIdVCDelegate: class {
+protocol PaymentIdVCDelegate: AnyObject {
     func paymentIdVCBackButtonTouched()
     func paymentIdVCNextButtonTouched(paymentId: String, viewController: PaymentIdVC)
     func paymentIdVCPasteFromClipboardButtonTouched(viewController: PaymentIdVC)
