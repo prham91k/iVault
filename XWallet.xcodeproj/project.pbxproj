@@ -2123,7 +2123,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1.11.0.0;
+				CURRENT_PROJECT_VERSION = 0.2.1.61;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2137,7 +2137,7 @@
 					"$(PROJECT_DIR)/XWallet/external-libs/libsodium",
 					"$(PROJECT_DIR)/XWallet/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 0.2.1;
 				OTHER_CFLAGS = (
 					"-IXWallet/MoneroLib/",
 					"-IXWallet/CLib/",
@@ -2156,7 +2156,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1.11.0.0;
+				CURRENT_PROJECT_VERSION = 0.2.1.61;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2170,7 +2170,7 @@
 					"$(PROJECT_DIR)/XWallet/external-libs/libsodium",
 					"$(PROJECT_DIR)/XWallet/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 0.2.1;
 				OTHER_CFLAGS = (
 					"-IXWallet/MoneroLib/",
 					"-IXWallet/CLib/",
