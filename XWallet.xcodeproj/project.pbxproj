@@ -172,6 +172,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C70A48E269B30DA009BA364 /* XWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWallet.entitlements; sourceTree = "<group>"; };
 		5CC250742658C31900B67102 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = "XWallet/external-libs/boost/libboost_date_time.a"; sourceTree = "<group>"; };
 		5CC250752658C31900B67102 /* libboost_locale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_locale.a; path = "XWallet/external-libs/boost/libboost_locale.a"; sourceTree = "<group>"; };
 		5CC250762658C31900B67102 /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_regex.a; path = "XWallet/external-libs/boost/libboost_regex.a"; sourceTree = "<group>"; };
@@ -803,14 +804,6 @@
 				EEE1D5011F29153400D464C3 /* AppDelegate.swift */,
 			);
 			name = _Main;
-			sourceTree = "<group>";
-		};
-		EE5D016F1F3E033400E41AED /* _Assets */ = {
-			isa = PBXGroup;
-			children = (
-				EEE1D5081F29153400D464C3 /* Assets.xcassets */,
-			);
-			name = _Assets;
 			sourceTree = "<group>";
 		};
 		EE5D01701F4030A800E41AED /* MoneroLib */ = {
@@ -1487,7 +1480,8 @@
 		EEE1D5001F29153400D464C3 /* XWallet */ = {
 			isa = PBXGroup;
 			children = (
-				EE5D016F1F3E033400E41AED /* _Assets */,
+				EEE1D5081F29153400D464C3 /* Assets.xcassets */,
+				5C70A48E269B30DA009BA364 /* XWallet.entitlements */,
 				EE5D016E1F3E030F00E41AED /* _Main */,
 				EE512A8720E8C9E8000EDBC3 /* DataSources */,
 				EE47C0881F9CA191000DCC39 /* Definitions */,
@@ -2123,7 +2117,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 0.2.1.61;
+				CODE_SIGN_ENTITLEMENTS = XWallet/XWallet.entitlements;
+				CURRENT_PROJECT_VERSION = 0.2.2.61;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2137,7 +2132,7 @@
 					"$(PROJECT_DIR)/XWallet/external-libs/libsodium",
 					"$(PROJECT_DIR)/XWallet/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_CFLAGS = (
 					"-IXWallet/MoneroLib/",
 					"-IXWallet/CLib/",
@@ -2145,9 +2140,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.glancemy.XWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "XWallet/XWallet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2156,7 +2153,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 0.2.1.61;
+				CODE_SIGN_ENTITLEMENTS = XWallet/XWallet.entitlements;
+				CURRENT_PROJECT_VERSION = 0.2.2.61;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2170,7 +2168,7 @@
 					"$(PROJECT_DIR)/XWallet/external-libs/libsodium",
 					"$(PROJECT_DIR)/XWallet/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_CFLAGS = (
 					"-IXWallet/MoneroLib/",
 					"-IXWallet/CLib/",
@@ -2178,8 +2176,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.glancemy.XWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "XWallet/XWallet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -29,6 +29,7 @@ public class Colors {
                                                        text: Color(color: UIColor.white, alpha: 1.0))
     
     public static let defaultLabelDark =  UIColor.white
-    public static let defaultLabelLight =  UIColor.black
+    //public static let defaultLabelLight =  UIColor.black
+    public static let defaultLabelLight =  UIColor.white
 
 }
