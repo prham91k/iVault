@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-Wt-eFy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSn-Na-7d5" userLabel="NavBar">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
@@ -151,17 +148,13 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NVG-aG-uyb"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="top" secondItem="VSn-Na-7d5" secondAttribute="bottom" constant="40" id="AaP-mn-JyO"/>
-                            <constraint firstItem="aVr-Wt-eFy" firstAttribute="top" secondItem="feN-d6-oPu" secondAttribute="top" id="CYh-of-gFH"/>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="trailing" secondItem="feN-d6-oPu" secondAttribute="trailingMargin" id="Eds-DB-W7b"/>
-                            <constraint firstItem="aVr-Wt-eFy" firstAttribute="left" secondItem="feN-d6-oPu" secondAttribute="left" id="I1K-TL-alz"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="trailing" secondItem="NVG-aG-uyb" secondAttribute="trailing" id="Ijs-hS-Lgo"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="leading" secondItem="NVG-aG-uyb" secondAttribute="leading" id="Q0f-4o-cP8"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="top" secondItem="NVG-aG-uyb" secondAttribute="top" id="Ugd-Ys-hPS"/>
-                            <constraint firstAttribute="bottom" secondItem="aVr-Wt-eFy" secondAttribute="bottom" id="csa-q7-Wx3"/>
-                            <constraint firstAttribute="right" secondItem="aVr-Wt-eFy" secondAttribute="right" id="g5a-WG-S2g"/>
                             <constraint firstItem="NVG-aG-uyb" firstAttribute="bottom" secondItem="0Dg-xL-d8m" secondAttribute="bottom" constant="20" id="jO2-C5-gAf"/>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="leading" secondItem="feN-d6-oPu" secondAttribute="leadingMargin" id="sh8-ho-A5R"/>
                         </constraints>
@@ -183,6 +176,5 @@
     </scenes>
     <resources>
         <image name="BackButtonArrow" width="13" height="22"/>
-        <image name="Background" width="375" height="667"/>
     </resources>
 </document>

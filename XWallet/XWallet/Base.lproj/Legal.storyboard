@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-Wt-eFy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSn-Na-7d5" userLabel="NavBar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="58"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,14 +33,14 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="C5b-UG-bYh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxI-5n-0zd">
                                         <rect key="frame" x="0.0" y="41" width="374" height="555"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium </string>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -85,17 +81,13 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NVG-aG-uyb"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="top" secondItem="VSn-Na-7d5" secondAttribute="bottom" constant="12" id="AaP-mn-JyO"/>
-                            <constraint firstItem="aVr-Wt-eFy" firstAttribute="top" secondItem="feN-d6-oPu" secondAttribute="top" id="CYh-of-gFH"/>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="trailing" secondItem="feN-d6-oPu" secondAttribute="trailingMargin" id="Eds-DB-W7b"/>
-                            <constraint firstItem="aVr-Wt-eFy" firstAttribute="left" secondItem="feN-d6-oPu" secondAttribute="left" id="I1K-TL-alz"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="trailing" secondItem="NVG-aG-uyb" secondAttribute="trailing" id="Ijs-hS-Lgo"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="leading" secondItem="NVG-aG-uyb" secondAttribute="leading" id="Q0f-4o-cP8"/>
                             <constraint firstItem="VSn-Na-7d5" firstAttribute="top" secondItem="NVG-aG-uyb" secondAttribute="top" id="Ugd-Ys-hPS"/>
-                            <constraint firstAttribute="bottom" secondItem="aVr-Wt-eFy" secondAttribute="bottom" id="csa-q7-Wx3"/>
-                            <constraint firstAttribute="right" secondItem="aVr-Wt-eFy" secondAttribute="right" id="g5a-WG-S2g"/>
                             <constraint firstItem="NVG-aG-uyb" firstAttribute="bottom" secondItem="0Dg-xL-d8m" secondAttribute="bottom" constant="20" id="jO2-C5-gAf"/>
                             <constraint firstItem="0Dg-xL-d8m" firstAttribute="leading" secondItem="feN-d6-oPu" secondAttribute="leadingMargin" id="sh8-ho-A5R"/>
                         </constraints>
@@ -112,10 +104,4 @@
             <point key="canvasLocation" x="1597.1014492753625" y="67.633928571428569"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Background" width="375" height="667"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

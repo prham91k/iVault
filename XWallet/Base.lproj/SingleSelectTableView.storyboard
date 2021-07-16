@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,11 +26,11 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="fCV-2T-6PK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cly-Hh-3dm" userLabel="BackButton">
-                                        <rect key="frame" x="8" y="7" width="64" height="30"/>
+                                        <rect key="frame" x="8" y="7" width="63" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="n8w-aJ-O1v"/>
                                             <constraint firstAttribute="height" constant="30" id="vOJ-oV-TOS"/>
@@ -60,7 +58,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleSelectionCell" rowHeight="60" id="Ip6-U8-mLz" customClass="SingleSelectionCell" customModule="XWallet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ip6-U8-mLz" id="fvg-UN-0AX" userLabel="CellContentView">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -138,7 +136,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="b5S-3E-OTe"/>
+                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RM6-Xm-diU" secondAttribute="bottom" id="IRI-ln-BTV"/>
                             <constraint firstItem="qqT-9n-USj" firstAttribute="leading" secondItem="b5S-3E-OTe" secondAttribute="leading" id="W9E-NS-iF4"/>
@@ -148,7 +147,6 @@
                             <constraint firstItem="qqT-9n-USj" firstAttribute="top" secondItem="b5S-3E-OTe" secondAttribute="top" id="mtZ-Oq-oTZ"/>
                             <constraint firstItem="RM6-Xm-diU" firstAttribute="leading" secondItem="b5S-3E-OTe" secondAttribute="leading" id="vor-Yl-TfA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="b5S-3E-OTe"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Cly-Hh-3dm" id="pjZ-FN-EfN"/>
