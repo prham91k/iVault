@@ -386,7 +386,7 @@
     </scenes>
     <resources>
         <image name="BackButtonArrow" width="13" height="22"/>
-        <image name="BalanceBackground" width="76" height="77"/>
+        <image name="BalanceBackground" width="60" height="61"/>
         <image name="ForwardButtonArrow" width="8" height="13"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 import UIKit
 
 
-public protocol PinVCDelegate: class {
+public protocol PinVCDelegate: AnyObject {
     func pinVCButtonNextTouched(pinEntered pin: String, viewController: PinVC)
     func pinVCButtonBackTouched()
 }

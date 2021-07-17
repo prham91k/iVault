@@ -1304,7 +1304,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OhW-rc-zzg"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YPh-T3-GpK" firstAttribute="top" secondItem="OhW-rc-zzg" secondAttribute="top" id="GiY-3e-sns"/>
                             <constraint firstItem="OhW-rc-zzg" firstAttribute="trailing" secondItem="YPh-T3-GpK" secondAttribute="trailing" id="Jyn-Zs-fBr"/>

@@ -4,7 +4,7 @@
   Created by loj on 03.03.19.
   Copyright © 2019 loj. All rights reserved. */
 
-"walletView.title" = "X WALLET";
+"walletView.title" = " iVault";
 
 "walletView.title.syncing" = "SYNCING";
 
@@ -116,7 +116,7 @@
 
 "newWalletView.button.recover" = "Recover Wallet";
 
-"pinView.title" = "X WALLET";
+"pinView.title" = "iVault";
 
 "pinView.subTitle" = "PIN";
 
@@ -124,7 +124,7 @@
 
 "pinView.button.next" = "Next";
 
-"pinConfirmView.title" = "X WALLET";
+"pinConfirmView.title"  = "iVault";
 
 "pinConfirmView.subTitle" = "Confirm PIN";
 
@@ -168,7 +168,7 @@
 
 "settingsView.selectNode.button" = "Choose";
 
-"settingsView.nukeXWallet.title" = "Nuke X Wallet";
+"settingsView.nukeXWallet.title" = "Nuke vault";
 
 "settingsView.nukeXWallet.subTitle" = "Remove all wallet data";
 
@@ -176,9 +176,9 @@
 
 "settingsView.feedback.title" = "Send Feedback";
 
-"settingsView.feedback.button" = "X Wallet Feedback";
+"settingsView.feedback.button" = "iVault Feedback";
 
-"settingsView.feedback.messageBody" = "Hi, I am a happy X Wallet user and I have a question/suggestion:\n\n";
+"settingsView.feedback.messageBody" = "Hi, I am a happy iVault user and I have a question/suggestion:\n\n";
 
 "settingsView.feedback.description" = "Please check our troubleshooting web page before you send a support request.";
 
@@ -214,17 +214,17 @@
 
 "nukeWallet.pinView.title" = "NUKE";
 
-"nukeWallet.pinView.subTitle" = "Nuke X Wallet";
+"nukeWallet.pinView.subTitle" = "Nuke iVault";
 
 "nukeWallet.pinView.button.next" = "Nuke";
 
-"nukeWallet.pinView.instruction" = "Enter PIN to nuke X Wallet. Make sure you have your seed saved.";
+"nukeWallet.pinView.instruction" = "Enter PIN to nuke iVault. Make sure you have your seed saved.";
 
-"appPinView.title" = "X WALLET";
+"appPinView.title" = "iVault";
 
 "appPinView.subTitle" = "Enter PIN";
 
-"appleWatch2faView.title" = "X WALLET";
+"appleWatch2faView.title" = "iVault";
 
 "appleWatch2faView.subTitle" = "Two Factor Authentication";
 
@@ -234,7 +234,7 @@
 
 "appleWatch2faView.button.skipAuthentication" = "Skip Apple Watch";
 
-"appleWatchPinView.title" = "X WALLET";
+"appleWatchPinView.title" = "iVault";
 
 "appleWatchPinView.subTitle" = "Enter Apple Watch 2FA PIN";
 
@@ -314,7 +314,7 @@
 
 "summaryView.total" = "Total";
 
-"seedView.title" = "X WALLET";
+"seedView.title" = "iVault";
 
 "seedView.subTitle" = "Seed";
 

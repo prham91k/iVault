@@ -5,15 +5,15 @@
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 22,
-          "left" : 23,
-          "right" : 23,
-          "top" : 24
+          "bottom" : 14,
+          "left" : 15,
+          "right" : 14,
+          "top" : 14
         },
         "center" : {
-          "height" : 31,
+          "height" : 33,
           "mode" : "stretch",
-          "width" : 30
+          "width" : 31
         },
         "mode" : "9-part"
       }

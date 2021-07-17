@@ -14,7 +14,7 @@ public class Constants {
     
     public static let pinCodeLength = 6
     
-    public static let defaultWalletName = "xwallet"
+    public static let defaultWalletName = "default"
     public static let defaultWalletLanguage = "English"
     
     // Size in bytes for trx go be accepted

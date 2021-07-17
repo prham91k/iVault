@@ -26,7 +26,7 @@
                                             <constraint firstAttribute="height" constant="30" id="MJU-G4-eV1"/>
                                         </constraints>
                                         <state key="normal" title="!!Back" image="BackButtonArrow">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTouched" destination="mAy-sc-L24" eventType="touchUpInside" id="WpX-wA-pJs"/>
@@ -48,7 +48,9 @@
                                             <constraint firstAttribute="height" constant="30" id="FWA-a1-C3g"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="!!Next"/>
+                                        <state key="normal" title="!!Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButtonTouched" destination="mAy-sc-L24" eventType="touchUpInside" id="3II-aI-7cH"/>
                                         </connections>
@@ -156,7 +158,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Sf5-3P-9ww"/>
                                         </constraints>
                                         <state key="normal" title="!!Back" image="BackButtonArrow">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTouched" destination="mAy-sc-L24" eventType="touchUpInside" id="YEE-2q-8Ez"/>
@@ -178,7 +180,9 @@
                                             <constraint firstAttribute="height" constant="30" id="pPx-Rs-l0e"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="!!Next"/>
+                                        <state key="normal" title="!!Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButtonTouched" destination="mAy-sc-L24" eventType="touchUpInside" id="OxC-Xv-kDJ"/>
                                         </connections>
@@ -205,7 +209,7 @@
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vwu-Dk-4Ls">
                                                 <rect key="frame" x="0.0" y="8" width="343" height="4"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                         </subviews>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -509,7 +513,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Ad4-DG-hO7"/>
                                         </constraints>
                                         <state key="normal" title="!!Back" image="BackButtonArrow">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTouched" destination="Egp-4m-Bbt" eventType="touchUpInside" id="QJf-Za-31N"/>
@@ -531,7 +535,9 @@
                                             <constraint firstAttribute="height" constant="30" id="yMY-uU-oth"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="!!Next"/>
+                                        <state key="normal" title="!!Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButtonTouched" destination="Egp-4m-Bbt" eventType="touchUpInside" id="mKL-dH-YwF"/>
                                         </connections>
@@ -598,7 +604,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEg-X2-ZDk" customClass="PinDotView" customModule="XWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="U5m-b9-yVC"/>
                                                 </constraints>
@@ -655,20 +660,20 @@
                                             <constraint firstAttribute="height" constant="30" id="lDW-H9-Gxx"/>
                                         </constraints>
                                         <state key="normal" title="!!Back" image="BackButtonArrow">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTouched" destination="twP-3N-wm7" eventType="touchUpInside" id="5pZ-el-fCw"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X WALLET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szG-a7-5Dt" userLabel="Label">
-                                        <rect key="frame" x="147.33333333333334" y="11.666666666666664" width="80.333333333333343" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iVault" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szG-a7-5Dt" userLabel="Label">
+                                        <rect key="frame" x="159.66666666666666" y="11.666666666666664" width="56" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="PPf-Sd-X3l"/>
                                             <constraint firstAttribute="height" constant="21" id="PXu-x6-Iuc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-SP-svN" userLabel="NextButton">
@@ -677,7 +682,9 @@
                                             <constraint firstAttribute="height" constant="30" id="p1a-NR-5A8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="!!Next"/>
+                                        <state key="normal" title="!!Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButtonTouched" destination="twP-3N-wm7" eventType="touchUpInside" id="4A2-4e-UHb"/>
                                         </connections>
@@ -704,7 +711,7 @@
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="mYi-yN-6ii">
                                                 <rect key="frame" x="0.0" y="8" width="343" height="4"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                         </subviews>
                                         <constraints>
@@ -720,7 +727,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="ChG-AA-RZT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -738,7 +745,7 @@
                                                     <constraint firstAttribute="height" constant="80" id="69D-Qz-gRi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -753,6 +760,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="cXJ-28-9mx"/>
                                                 </constraints>
                                                 <string key="text">word1 word2 word3 word4 word5 word1 word2 word3 word4 word5 word1 word2 word3 word4 word5 word1 word2 word3 word4 word5 word1 word2 word3 word4 word5</string>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                             </textView>
