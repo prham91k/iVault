@@ -5,18 +5,27 @@
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 13,
-          "left" : 12,
-          "right" : 13,
-          "top" : 12
+          "bottom" : 20,
+          "left" : 19,
+          "right" : 20,
+          "top" : 20
         },
         "center" : {
           "height" : 1,
-          "mode" : "stretch",
-          "width" : 2
+          "mode" : "tile",
+          "width" : 3
         },
         "mode" : "9-part"
-      }
+      },
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
@@ -24,7 +33,6 @@
     "version" : 1
   },
   "properties" : {
-    "auto-scaling" : "auto",
-    "preserves-vector-representation" : true
+    "auto-scaling" : "auto"
   }
 }

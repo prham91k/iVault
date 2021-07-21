@@ -9,7 +9,7 @@ import AVFoundation
 import UIKit
 
 
-public protocol ScanVCDelegate: class {
+public protocol ScanVCDelegate: AnyObject {
     func scanVCDelegateBackButtonTouched()
     func scanVCDelegateUriDetected(uri: String, viewController: ScanVC)
 }

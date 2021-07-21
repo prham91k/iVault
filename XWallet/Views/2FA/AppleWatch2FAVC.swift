@@ -8,7 +8,7 @@
 import UIKit
 
 
-public protocol AppleWatch2FAVCDelegate: class {
+public protocol AppleWatch2FAVCDelegate: AnyObject {
     func appleWatch2FAVCButtonBackTouched()
     func appleWatch2FAVCButtonRequestAuthenticationTouched(viewController: AppleWatch2FAVC)
     func appleWatch2FAVCButtonSkipAuthenticationTouched(viewController: AppleWatch2FAVC)

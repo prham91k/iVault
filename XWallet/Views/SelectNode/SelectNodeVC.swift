@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol SelectNodeVCDelegate: class {
+protocol SelectNodeVCDelegate: AnyObject {
     func selectNodeVCBackButtonTouched()
     func selectNodeVCRestoreDefaultsButtonTouched(selectNodeVC: SelectNodeVC)
     func selectNodeVCConnectButtonTouched(address: String, userId: String, password: String, selectNodeVC: SelectNodeVC)

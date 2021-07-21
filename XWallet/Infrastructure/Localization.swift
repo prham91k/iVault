@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol Localizable: class {
+public protocol Localizable: AnyObject {
     func use(languageId: String)
     func localized(_ text: String) -> String
     func localized(_ age: FiatAge) -> String

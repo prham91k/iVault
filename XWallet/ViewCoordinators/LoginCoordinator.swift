@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol LoginCoordinatorDelegate: class {
+public protocol LoginCoordinatorDelegate: AnyObject {
     func loginCoordinatorLoginSucessful(loginCoordinator: LoginCoordinator)
 }
 

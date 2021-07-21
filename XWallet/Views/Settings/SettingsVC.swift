@@ -70,11 +70,11 @@ class SettingsVC: UIViewController {
                     1: (languageCell, 104, self.viewModel.delegate?.settingsVCLanguageSelectionTouched),
                     2: (displayRecoverySeedCell, 142, nil),
                     3: (changePinCell, 122, nil),
-                    4: (tfaSupportCell, 122, nil),
-                    5: (selectNodeCell, 142, nil),
-                    6: (feedbackCell, 122, nil),
-                    7: (nukeXWalletCell, 142, nil),
-                    8: (privacyCell, 122, nil)
+//                    4: (tfaSupportCell, 122, nil),
+                    4: (selectNodeCell, 142, nil),
+                    5: (feedbackCell, 122, nil),
+                    6: (nukeXWalletCell, 142, nil),
+                    7: (privacyCell, 122, nil)
            ]
         }
     }
