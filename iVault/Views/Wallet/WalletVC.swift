@@ -58,7 +58,8 @@ class WalletVC: UIViewController {
     
     private var syncIsInProgress = false
     private var hasLockedBalance = false
-    private var previousHeight = Double(0)
+    private var blockChainHeight = Double(0)
+
     public func refresh() {
         self.updateControls()
     }
@@ -76,10 +77,9 @@ class WalletVC: UIViewController {
         let max = Double(blockChainHeight)
         let current = Double(walletHeight)
         
-        Debug.print(s: "Current Height current \(current) Previous Height \(previousHeight)");
         self.heightLabel.text = "Height: \(String(format: "%.0f", current)) / \(String(format: "%.0f", max))"
         
-        self.previousHeight = max;
+        self.blockChainHeight = current;
         var percent = Int((current - min) / (max - min) * 100.0)
         if percent > 99 {
             percent = 99
@@ -107,7 +107,7 @@ class WalletVC: UIViewController {
         }
 //        self.progressView.isHidden = true
         self.progressView.setProgress(1, animated: true)
-        self.heightLabel.text =  String(format: "Height: %.0f", self.previousHeight)
+        self.heightLabel.text =  String(format: "Height: %.0f", self.blockChainHeight)
 
         self.syncIsInProgress = false
         self.updateSendButtons()
