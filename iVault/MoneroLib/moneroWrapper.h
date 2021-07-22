@@ -51,6 +51,7 @@ extern "C" {
         uint64_t fee;
         uint64_t confirmations;
         time_t timestamp;
+        uint64_t height;
     };
     
     struct monero_history

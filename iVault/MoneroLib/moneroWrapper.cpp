@@ -312,6 +312,7 @@ monero_history* monero_getTrxHistory() {
         trx->fee = transactionInfo->fee();
         trx->confirmations = transactionInfo->confirmations();
         trx->timestamp = transactionInfo->timestamp();
+        trx->height = transactionInfo->blockHeight();
         //std::cout << "Transaction amount : " << trx->amount << '\n';
         moneroHistory->transactions[i] = trx;
     }

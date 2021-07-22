@@ -114,7 +114,8 @@ extension Wallet: WalletProtocol {
                                                   amount: swiftTransaction.amount,
                                                   networkFee: swiftTransaction.fee,
                                                   timestamp: UInt64(swiftTransaction.timestamp),
-                                                  confirmations: swiftTransaction.confirmations)
+                                                  confirmations: swiftTransaction.confirmations,
+                                                  height: UInt64(swiftTransaction.height))
                 unorderedHistory.append(historyItem)
             }
         }
@@ -122,7 +123,7 @@ extension Wallet: WalletProtocol {
         monero_deleteHistory(moneroHistory)
         
         // in reverse order: latest to oldest
-        transactionHistory.all = unorderedHistory.sorted{ return $0.timestamp > $1.timestamp }
+        transactionHistory.all = unorderedHistory.sorted{ return $0.height > $1.height }
         return transactionHistory
     }
     

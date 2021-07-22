@@ -17,6 +17,7 @@ public struct TransactionItem {
     public let networkFee: UInt64
     public let timestamp: UInt64
     public let confirmations: UInt64
+    public let height: UInt64
     
     public init(direction: TransactionDirection,
                 isPending: Bool,
@@ -24,7 +25,8 @@ public struct TransactionItem {
                 amount: UInt64,
                 networkFee: UInt64,
                 timestamp: UInt64,
-                confirmations: UInt64)
+                confirmations: UInt64,
+                height:UInt64)
     {
         self.direction = direction
         self.isPending = isPending
@@ -33,6 +35,7 @@ public struct TransactionItem {
         self.networkFee = networkFee
         self.timestamp = timestamp
         self.confirmations = confirmations
+        self.height = height
     }
     
     public func readableAmountWithNetworkFee() -> String {

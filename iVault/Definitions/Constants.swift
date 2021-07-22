@@ -31,7 +31,9 @@ public class Constants {
     
     public static let numberOfRequiredConfirmations: UInt64 = 30
     
+//    public static let defaultNodeAddress = "pool.scalaproject.io:8000"
     public static let defaultNodeAddress = "pool.scalaproject.io:8000"
+
     public static let defaultNodeUserId = ""
     public static let defaultNodePassword = ""
     
