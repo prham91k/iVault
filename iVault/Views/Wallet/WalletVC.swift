@@ -23,14 +23,16 @@ class WalletVC: UIViewController {
     @IBOutlet weak var xmrAmountLabel: UILabel!
     @IBOutlet weak var otherAmountLabel: UILabel!
     @IBOutlet weak var configButton: UIButton!
+    @IBOutlet weak var sendButtonView: UIView!
     @IBOutlet weak var sendButtonLabel: UILabel!
     @IBOutlet weak var sendButtonImageView: UIImageView!
+    @IBOutlet weak var receiveButtonView: UIView!
     @IBOutlet weak var receiveButtonLabel: UILabel!
     @IBOutlet weak var receiveButtonImageView: UIImageView!
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var emptyTransactionsLabel: UILabel!
     @IBOutlet weak var tabBarView: UIView!
-
+    @IBOutlet weak var heightLabel: UILabel!
     // Container handler used for gesture recognizer
     @IBOutlet weak var sendButtonStackView: UIStackView!
     @IBOutlet weak var receiveButtonStackView: UIStackView!
@@ -74,13 +76,10 @@ class WalletVC: UIViewController {
         let max = Double(blockChainHeight)
         let current = Double(walletHeight)
         
-//        Debug.print(s: "Current Height current \(current) Previous Height \(previousHeight)");
+        Debug.print(s: "Current Height current \(current) Previous Height \(previousHeight)");
+        self.heightLabel.text = "Height: \(String(format: "%.0f", current)) / \(String(format: "%.0f", max))"
         
-//        if(current.isLess(than: self.previousHeight) || current.isEqual(to: self.previousHeight)) {
-//            return;
-//        }
-//
-//        self.previousHeight = current;
+        self.previousHeight = max;
         var percent = Int((current - min) / (max - min) * 100.0)
         if percent > 99 {
             percent = 99
@@ -106,8 +105,10 @@ class WalletVC: UIViewController {
         if let viewTitle = self.viewModel?.viewTitle {
             self.viewTitleLabel.text = viewTitle
         }
-        self.progressView.isHidden = true
-        
+//        self.progressView.isHidden = true
+        self.progressView.setProgress(1, animated: true)
+        self.heightLabel.text =  String(format: "Height: %.0f", self.previousHeight)
+
         self.syncIsInProgress = false
         self.updateSendButtons()
     }
@@ -144,15 +145,15 @@ class WalletVC: UIViewController {
         self.historyTableView.dataSource = self
         
         self.sendButtonGestureRecognizer.addTarget(self, action: #selector(self.sendButtonTouched))
-        self.sendButtonStackView.addGestureRecognizer(self.sendButtonGestureRecognizer)
+        self.sendButtonView.addGestureRecognizer(self.sendButtonGestureRecognizer)
         
         self.receiveButtonGestureRecognizer.addTarget(self, action: #selector(self.receiveButtonTouched))
-        self.receiveButtonStackView.addGestureRecognizer(self.receiveButtonGestureRecognizer)
+        self.receiveButtonView.addGestureRecognizer(self.receiveButtonGestureRecognizer)
 
-        self.tabBarView.layer.shadowColor = UIColor.lightGray.cgColor
-        self.tabBarView.layer.shadowOpacity = 0.7
-        self.tabBarView.layer.shadowOffset = .zero
-        self.tabBarView.layer.shadowRadius = 2
+//        self.tabBarView.layer.shadowColor = UIColor.lightGray.cgColor
+//        self.tabBarView.layer.shadowOpacity = 0.7
+//        self.tabBarView.layer.shadowOffset = .zero
+//        self.tabBarView.layer.shadowRadius = 2
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.willEnterForeground),
@@ -164,13 +165,16 @@ class WalletVC: UIViewController {
         if let viewTitle = self.viewModel?.viewTitle {
             self.viewTitleLabel.text = viewTitle
         }
-        self.progressView.isHidden = true
+//        self.progressView.isHidden = true
+        self.progressView.isHidden = false
+
         if let configButtonTitle = self.viewModel?.configButtonTitle {
             self.configButton.setTitle(configButtonTitle, for: .normal)
         }
         if let sendButtonTitle = self.viewModel?.sendButtonTitle {
             self.sendButtonLabel.text = sendButtonTitle
         }
+        
         if let receiveButtonTitle = self.viewModel?.receiveButtonTitle {
             self.receiveButtonLabel.text = receiveButtonTitle
         }
@@ -218,19 +222,19 @@ class WalletVC: UIViewController {
     
     private func enableSendButton() {
         // Listener might fire before view is completly initialized
-        guard let sendButtonStackView = self.sendButtonStackView else {
+        guard let sendButtonView = self.sendButtonView else {
             return
         }
-        sendButtonStackView.isUserInteractionEnabled = true
+        sendButtonView.isUserInteractionEnabled = true
         sendButtonStackView.alpha = 1.0
     }
     
     private func disableSendButton() {
         // Listener might fire before view is completly initialized
-        guard let sendButtonStackView = self.sendButtonStackView else {
+        guard let sendButtonView = self.sendButtonView else {
             return
         }
-        sendButtonStackView.isUserInteractionEnabled = false
+        sendButtonView.isUserInteractionEnabled = false
         sendButtonStackView.alpha = 0.5
     }
 }

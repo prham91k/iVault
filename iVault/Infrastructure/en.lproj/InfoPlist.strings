@@ -358,9 +358,9 @@
 
 "legal.button.decline" = "I decline";
 
-"legal.decline.text" = "We are sorry, but if you do not agree with the terms and conditions you must quit X Wallet.";
+"legal.decline.text" = "We are sorry, but if you do not agree with the terms and conditions you must quit Scala iVault.";
 
 "legal.title" = "Terms and conditions";
 
-"newWalletView.keychainLost" = "We are really sorry, but ...\n\nTL;DR The keychain for X Wallet containing your secured PIN is no longer accessible. You need to create a new wallet or recover any previous.\n\nWHY??? We transferred X Wallet from one app store account to another. This unfortunately creates a new app id which in turn prevents access to the keychain of the previous app id.";
+"newWalletView.keychainLost" = "The keychain for Scala iVault containing your secured PIN is no longer accessible. You need to create a new wallet or recover any previous.";
 

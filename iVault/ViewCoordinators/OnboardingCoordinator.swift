@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol OnboardingCoordinatorDelegate: class {
+public protocol OnboardingCoordinatorDelegate: AnyObject {
     func onboardingCoordinatorLoginSucessful(onboardingCoordinator: OnboardingCoordinator)
 }
 

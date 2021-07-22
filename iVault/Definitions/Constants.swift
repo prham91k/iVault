@@ -26,7 +26,7 @@ public class Constants {
 //    public static let prettyPrintNumberOfFractionDigits = 2
     public static let prettyPrintNumberOfFractionDigits = 2
     
-    public static let mixinCount: UInt32 = 11
+    public static let mixinCount: UInt32 = 2
     public static let defaultTransactionPriority = PendingTransactionPriority_Low
     
     public static let numberOfRequiredConfirmations: UInt64 = 30
