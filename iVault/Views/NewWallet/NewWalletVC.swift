@@ -8,7 +8,7 @@
 import UIKit
 
 
-public protocol NewWalletVCDelegate: class {
+public protocol NewWalletVCDelegate: AnyObject {
     func newWalletVCDidSelectNewWallet(newWallet: NewWalletVC)
     func newWalletVCDidSelectRecoverWallet(newWallet: NewWalletVC)
 }

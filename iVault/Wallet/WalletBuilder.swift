@@ -114,13 +114,14 @@ public class WalletBuilder: WalletBuilderProtocol {
     private func openExistingWallet() -> Bool {
         let success = monero_openExistingWallet(self.pathWithFileName(),
                                                 self.walletPassword)
+        Debug.print(s: "[WalletBuilder] WALLET LOCATION: \(self.pathWithFileName()) Status : \(success)")
+
         return success
     }
     
     private func pathWithFileName() -> String {
         let documentPath = self.fileHandling.documentPath()
         let pathWithFileName = documentPath + self.walletName
-        Debug.print(s: "### WALLET LOCATION: \(pathWithFileName)")
         
         return pathWithFileName
     }

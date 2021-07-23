@@ -11,7 +11,8 @@ import Foundation
 public class Debug {
     
     public static func print(s: String) {
-//        let warning = "disable for relase version"
+#if DEBUG
         Swift.print("[DEBUG]  \(s)")
+#endif
     }
 }

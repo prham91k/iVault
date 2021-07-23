@@ -99,7 +99,14 @@ public class AppCoordinator: Coordinator {
     }
 
     private func keychainLost() -> Bool {
-        return self.secureStore.appPin == nil
+        let documentPath = self.fileHandling.documentPath()
+        let pathWithFileName = documentPath + Constants.defaultWalletName
+                                
+        let fileManager = FileManager.default
+        Debug.print(s: "[AppCoordinator::keychainLost] WALLET LOCATION: \(pathWithFileName)")
+
+        return !fileManager.fileExists(atPath: pathWithFileName) || self.secureStore.appPin == nil
+      
     }
     
     private func showLogin() {
@@ -159,7 +166,7 @@ extension AppCoordinator: LegalVCDelegate {
     }
 
     public func legalVCDeclineButtonTouched(viewController: LegalVC) {
-        let alert = UIAlertController.init(title: "X Wallet",
+        let alert = UIAlertController.init(title: "Scala iVault",
                                            message: self.localizer.localized("legal.decline.text"),
                                            preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: self.localizer.localized("global.ok"),

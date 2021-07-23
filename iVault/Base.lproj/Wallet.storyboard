@@ -13,7 +13,7 @@
         <scene sceneID="Nwb-57-I7a">
             <objects>
                 <viewController storyboardIdentifier="Wallet" title="Wallet" id="680-WI-waP" customClass="WalletVC" customModule="iVault" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Q7s-nK-gEm">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Q7s-nK-gEm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -184,9 +184,9 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="frW-2A-Q1D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="frW-2A-Q1D">
                                 <rect key="frame" x="0.0" y="354" width="414" height="508"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxCell" id="htR-ot-gfu" userLabel="TrxCell" customClass="TransactionCell" customModule="iVault" customModuleProvider="target">
@@ -196,12 +196,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-Nt-qXH">
-                                                    <rect key="frame" x="16" y="8" width="382" height="104"/>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-Nt-qXH">
+                                                    <rect key="frame" x="16" y="8" width="382" height="98"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TransactionCellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HwW-GS-Kee">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="104"/>
-                                                        </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-bR-g2l" userLabel="ArrowView">
                                                             <rect key="frame" x="0.0" y="2" width="70" height="96"/>
                                                             <subviews>
@@ -240,7 +237,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!22.08.2017 22:08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S8-bA-WgR">
                                                                             <rect key="frame" x="30" y="0.0" width="250" height="52"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -256,7 +253,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2208.22082208 received" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-3j-CSW">
                                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="52"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -267,7 +264,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!! Confirmations received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej9-3X-Xud">
                                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="52"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -275,19 +272,15 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="ZC5-gi-kdf" secondAttribute="trailing" constant="16" id="676-dS-qAq"/>
                                                         <constraint firstItem="Y6H-bR-g2l" firstAttribute="leading" secondItem="iRZ-Nt-qXH" secondAttribute="leading" id="6hK-yo-eKL"/>
                                                         <constraint firstAttribute="bottom" secondItem="ZC5-gi-kdf" secondAttribute="bottom" id="Cwy-Ir-jGH"/>
-                                                        <constraint firstItem="HwW-GS-Kee" firstAttribute="leading" secondItem="iRZ-Nt-qXH" secondAttribute="leading" id="EiT-za-iLe"/>
-                                                        <constraint firstAttribute="trailing" secondItem="HwW-GS-Kee" secondAttribute="trailing" id="IfQ-iQ-rLr"/>
                                                         <constraint firstItem="ZC5-gi-kdf" firstAttribute="leading" secondItem="Y6H-bR-g2l" secondAttribute="trailing" constant="16" id="Vws-gk-wUf"/>
                                                         <constraint firstItem="ZC5-gi-kdf" firstAttribute="top" secondItem="iRZ-Nt-qXH" secondAttribute="top" id="asf-9a-gZ1"/>
                                                         <constraint firstAttribute="bottom" secondItem="Y6H-bR-g2l" secondAttribute="bottom" constant="6" id="gOJ-W7-eaT"/>
-                                                        <constraint firstItem="HwW-GS-Kee" firstAttribute="top" secondItem="iRZ-Nt-qXH" secondAttribute="top" id="ydY-Yj-wmO"/>
                                                         <constraint firstItem="Y6H-bR-g2l" firstAttribute="top" secondItem="iRZ-Nt-qXH" secondAttribute="top" constant="2" id="yqc-oO-n5U"/>
-                                                        <constraint firstAttribute="bottom" secondItem="HwW-GS-Kee" secondAttribute="bottom" id="zRZ-U6-fHh"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -309,7 +302,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!EmptyTransactions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kD0-wq-KZl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="!!EmptyTransactions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kD0-wq-KZl">
                                 <rect key="frame" x="20" y="354" width="374" height="542"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1385,7 +1378,6 @@
         <image name="ButtonBackgrond" width="28" height="26"/>
         <image name="QRC" width="1032" height="1032"/>
         <image name="ReceivedTransactionIcon" width="15" height="15"/>
-        <image name="TransactionCellBackground" width="351" height="112"/>
         <image name="TransactionClockIcon" width="12" height="12"/>
         <image name="TransactionDirectionBackground" width="69" height="104"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
