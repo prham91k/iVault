@@ -10,6 +10,7 @@
 #include "moneroWrapper.h"
 #include "Wallet2_api.h"
 #include <map>
+#include <chrono>
 
 const Scala::NetworkType networkType = Scala::MAINNET;
 
@@ -107,12 +108,17 @@ bool monero_recoverWalletFromSeed(const char* pathWithFileName,
 
 bool monero_openExistingWallet(const char* pathWithFileName, const char* password)
 {
+    auto start = std::chrono::high_resolution_clock::now();
+
     Scala::WalletManagerFactory::setLogLevel(monero_logLevel);
     Scala::WalletManagerFactory::setLogCategories("");
     struct Scala::WalletManager *walletManager = Scala::WalletManagerFactory::getWalletManager();
-
     monero_wallet = walletManager->openWallet(pathWithFileName, password, networkType);
-
+#ifdef DEBUG
+    auto finish = std::chrono::high_resolution_clock::now();
+    auto microseconds = std::chrono::duration_cast<std::chrono::milliseconds>(finish-start);
+    std::cout << "[SCALA]   " << "Opening wallet takes about : " << microseconds.count() << "ms\n";
+#endif
     return monero_wallet->status() == Scala::Wallet::Status_Ok;
 }
 

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol ChangePinCoordinatorDelegate: class {
+public protocol ChangePinCoordinatorDelegate: AnyObject {
     func changePinCoordinatorDone(changePinCoordinator: ChangePinCoordinator)
 }
 

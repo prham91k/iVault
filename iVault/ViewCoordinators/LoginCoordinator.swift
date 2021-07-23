@@ -145,7 +145,9 @@ public class LoginCoordinator: Coordinator {
             guard let walletPassword = self.secureStore.walletPassword,
                 let wallet = self.walletLifecycleService.unlockWallet(withPassword: walletPassword) else
             {
-                _ = "show message that unlock failed"
+                //TODO "show message that unlock failed"
+                Debug.print(s: "[LoginCoordinator] Unlocking wallet failed")
+                Debug.print(s: String(cString:monero_errorString()))
                 return
             }
             self.moneroBag.wallet = wallet
