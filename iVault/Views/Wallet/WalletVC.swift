@@ -77,9 +77,7 @@ class WalletVC: UIViewController {
         let max = Double(blockChainHeight)
         let current = Double(walletHeight)
         
-        self.heightLabel.text = "Height: \(String(format: "%.0f", current)) / \(String(format: "%.0f", max))"
         
-        self.blockChainHeight = current;
         var percent = Int((current - min) / (max - min) * 100.0)
         if percent > 99 {
             percent = 99
@@ -96,7 +94,9 @@ class WalletVC: UIViewController {
         
         self.progressView.setProgress(Float(percent) / 100.0, animated: true)
         self.progressView.isHidden = false
-        
+        self.heightLabel.text = "Height: \(String(format: "%.0f", current)) / \(String(format: "%.0f", max))"
+        self.blockChainHeight = max;
+
         self.syncIsInProgress = true
         self.updateSendButtons()
     }

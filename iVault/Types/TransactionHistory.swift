@@ -75,6 +75,7 @@ public struct TransactionItem {
     public func toString() -> String {
         var result = ""
         result.append("\(self.readableTimestamp())\t")
+        result.append("\(self.height)\t")
         result.append("\(self.readableAmountWithNetworkFee())\t")
         result.append("\(self.readableAmount())\t")
         result.append("\(self.readableNetworkFee())\t")

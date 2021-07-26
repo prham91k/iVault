@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol NukeWalletCoordinatorDelegate: class {
+public protocol NukeWalletCoordinatorDelegate: AnyObject {
     func nukeWalletCoordinatorCancelled(nukeWalletCoordinator: NukeWalletCoordinator)
     func nukeWalletCoordinatorWalletNuked(nukeWalletCoordinator: NukeWalletCoordinator)
 }

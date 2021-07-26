@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol ReceiveVCDelegate: class {
+protocol ReceiveVCDelegate: AnyObject {
     func receiveVCBackTouched()
     func receiveVCCopyToClipboardTouched()
 }

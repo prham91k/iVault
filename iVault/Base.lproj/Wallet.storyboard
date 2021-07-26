@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="width" constant="30" id="vT8-HH-ueZ"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="gearshape" catalog="system"/>
+                                        <state key="normal" image="pencil" catalog="system"/>
                                         <connections>
                                             <action selector="settingsButtonTouched" destination="680-WI-waP" eventType="touchUpInside" id="mfO-sz-eEZ"/>
                                         </connections>
@@ -89,25 +89,26 @@
                             </view>
                             <view contentMode="scaleToFill" id="awH-EY-jwU" userLabel="TabBar">
                                 <rect key="frame" x="0.0" y="266" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sqr-YO-XSw" userLabel="TBB">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-YV-61g" userLabel="TBSV">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="Oep-YV-61g" userLabel="TBSV">
                                         <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="0tk-iJ-CPf">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ButtonBackgrond" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-dG-Wlf">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonBackgrond" id="bkd-dG-Wlf">
                                                         <rect key="frame" x="0.0" y="-10" width="207" height="70"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="yBg-67-NDu" userLabel="Stack View Send">
                                                         <rect key="frame" x="34" y="0.0" width="138" height="60"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-uq-HbA" userLabel="SendImage">
                                                                 <rect key="frame" x="0.0" y="0.6666666666666643" width="138" height="27.333333333333336"/>
@@ -131,16 +132,17 @@
                                                     </stackView>
                                                 </subviews>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtA-OU-pI2">
+                                            <view contentMode="scaleToFill" id="RtA-OU-pI2">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ButtonBackgrond" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-Id-e6m">
                                                         <rect key="frame" x="0.0" y="-10" width="207" height="70"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="r5E-kB-Wl1" userLabel="Stack View Receive">
                                                         <rect key="frame" x="72" y="0.0" width="63" height="60"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wnS-nX-XY5" userLabel="ReceiveImage">
                                                                 <rect key="frame" x="0.0" y="-1.3333333333333321" width="63" height="29"/>
@@ -196,8 +198,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-Nt-qXH">
-                                                    <rect key="frame" x="16" y="8" width="382" height="98"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-Nt-qXH">
+                                                    <rect key="frame" x="16" y="8" width="382" height="104"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-bR-g2l" userLabel="ArrowView">
                                                             <rect key="frame" x="0.0" y="2" width="70" height="96"/>
@@ -309,7 +311,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="F8T-3d-Kfa" userLabel="TabBarXFiller">
+                            <view contentMode="scaleToFill" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" id="F8T-3d-Kfa" userLabel="TabBarXFiller">
                                 <rect key="frame" x="0.0" y="870" width="414" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1140635386" green="0.1788175702" blue="0.2258257568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -369,12 +371,12 @@
                             <constraint firstItem="kD0-wq-KZl" firstAttribute="trailing" secondItem="mHk-QR-Qkb" secondAttribute="trailing" constant="-20" id="67r-te-Vem"/>
                             <constraint firstItem="7eN-6h-YRl" firstAttribute="top" secondItem="mHk-QR-Qkb" secondAttribute="top" id="c25-Aj-7Kl"/>
                             <constraint firstItem="mHk-QR-Qkb" firstAttribute="trailing" secondItem="Amj-fb-SqL" secondAttribute="trailing" id="g2t-lH-v9T"/>
-                            <constraint firstItem="awH-EY-jwU" firstAttribute="bottom" secondItem="kD0-wq-KZl" secondAttribute="bottom" id="jAg-Wl-r1n"/>
                             <constraint firstItem="kD0-wq-KZl" firstAttribute="leading" secondItem="mHk-QR-Qkb" secondAttribute="leading" constant="20" id="jFs-LJ-iN4"/>
                             <constraint firstItem="mHk-QR-Qkb" firstAttribute="trailing" secondItem="7eN-6h-YRl" secondAttribute="trailing" id="mRN-eG-3X8"/>
                             <constraint firstItem="F8T-3d-Kfa" firstAttribute="leading" secondItem="mHk-QR-Qkb" secondAttribute="leading" id="pXK-dp-MPf"/>
                             <constraint firstItem="kD0-wq-KZl" firstAttribute="bottom" secondItem="F8T-3d-Kfa" secondAttribute="top" id="qbf-Vc-d6N"/>
                             <constraint firstItem="F8T-3d-Kfa" firstAttribute="bottom" secondItem="Q7s-nK-gEm" secondAttribute="bottom" id="teV-8T-8Nw"/>
+                            <constraint firstItem="bkd-dG-Wlf" firstAttribute="bottom" secondItem="kD0-wq-KZl" secondAttribute="top" id="ujt-eF-BvL"/>
                             <constraint firstItem="F8T-3d-Kfa" firstAttribute="trailing" secondItem="mHk-QR-Qkb" secondAttribute="trailing" id="wb6-g7-WtT"/>
                         </constraints>
                     </view>
@@ -1373,6 +1375,29 @@
             <point key="canvasLocation" x="2420" y="1768"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Yk-3h-y3a">
+            <size key="intrinsicContentSize" width="58" height="33"/>
+        </designable>
+        <designable name="AOD-QY-gTa">
+            <size key="intrinsicContentSize" width="374" height="33"/>
+        </designable>
+        <designable name="S6y-lW-QKW">
+            <size key="intrinsicContentSize" width="127" height="33"/>
+        </designable>
+        <designable name="dnf-dD-H5X">
+            <size key="intrinsicContentSize" width="230" height="33"/>
+        </designable>
+        <designable name="oOo-hy-x0l">
+            <size key="intrinsicContentSize" width="159" height="33"/>
+        </designable>
+        <designable name="qTz-H4-fEP">
+            <size key="intrinsicContentSize" width="184" height="33"/>
+        </designable>
+        <designable name="s1D-if-HI2">
+            <size key="intrinsicContentSize" width="78" height="33"/>
+        </designable>
+    </designables>
     <resources>
         <image name="BalanceBackground" width="27" height="26"/>
         <image name="ButtonBackgrond" width="28" height="26"/>
@@ -1380,10 +1405,10 @@
         <image name="ReceivedTransactionIcon" width="15" height="15"/>
         <image name="TransactionClockIcon" width="12" height="12"/>
         <image name="TransactionDirectionBackground" width="69" height="104"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
         <image name="moneroIcon" width="63" height="63"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
