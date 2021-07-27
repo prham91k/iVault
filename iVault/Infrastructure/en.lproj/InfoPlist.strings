@@ -1,0 +1,366 @@
+/* InfoPlist.strings
+  XWallet
+
+  Created by loj on 03.03.19.
+  Copyright © 2019 loj. All rights reserved. */
+
+"walletView.title" = " iVault";
+
+"walletView.title.syncing" = "SYNCING";
+
+"walletView.button.send" = "Send";
+
+"walletView.button.receive" = "Receive";
+
+"walletView.emptyInformation" = "If you are waiting for a transaction please stay tuned. It could take 30 minutes or longer for transactions to appear, depending on network conditions and the health of your remote node.\n\nIf you are waiting a long time, please check your network connection and the current load on your remote node.";
+
+"recipientView.title" = "SEND";
+
+"recipientView.subTitle" = "Recipient Address";
+
+"recipientView.instruction" = "Please choose a method";
+
+"recipientView.button.scanQRC" = "Scan QR Code";
+
+"recipientView.button.paste" = "Paste from Clipboard";
+
+"recipientView.button.sendToDeveloper" = "Send to Developer";
+
+"global.button.back" = "<";
+
+"receiveView.title" = "RECEIVE";
+
+"receiveView.button.copyToClipboard" = "Copy Address to Clipboard";
+
+"scanView.title" = "SCAN";
+
+"recipientView.message.pasteboardEmpty" = "Pasteboard is empty. Please open other app and copy the target wallet address into the pasteboard and then come back here.";
+
+"pasteFromClipboard.address" = "Send to Address";
+
+"pasteFromClipboard.paymentId" = "Payment ID";
+
+"pasteFromClipboard.amount" = "Amount";
+
+"pasteFromClipboard.button.accept" = "Accept";
+
+"global.cancel" = "Cancel";
+
+"global.invalidWalletAddress" = "Invalid wallet address";
+
+"global.invalidPaymentId" = "Invalid payment id";
+
+"global.invalidAmount" = "Invalid amount";
+
+"global.invalidDescription" = "Invalid description";
+
+"global.ok" = "OK";
+
+"amountView.button.next" = "Next";
+
+"amountView.title" = "SEND";
+
+"amountView.balance" = "Balance";
+
+"scan.address" = "Address";
+
+"amountView.estimatedFee" = "Estimated Fee";
+
+"scan.paymentId" = "Payment ID";
+
+"scan.amount" = "Amount";
+
+"scan.accept" = "Accept";
+
+"scan.retake" = "Retake";
+
+"paymentIdView.button.next" = "Next";
+
+"paymentIdView.title" = "SEND";
+
+"paymentIdView.subTitle" = "Payment ID";
+
+"paymentIdView.instruction" = "Please enter a payment ID if needed.";
+
+"paymentIdView.paymentId.placeholder" = "Payment ID";
+
+"paymentIdView.button.pasteFromClipboard" = "Paste";
+
+"paymentId.invalid" = "Your payment ID is invalid. Please change it or leave it empty.";
+
+"paymentId.invalid.fromClipboard" = "Not a valid payment ID in pasteboard";
+
+"summaryView.title" = "SEND";
+
+"summaryView.subTitle" = "Summary";
+
+"summaryView.address" = "Address";
+
+"summaryView.paymentId" = "Payment ID";
+
+"summaryView.subtotal" = "Subtotal";
+
+"summaryView.networkFee" = "Network Fee";
+
+"summaryView.button.confirm" = "Confirm";
+
+"summaryView.balanceInsufficient" = "Your balance might be too low or a network/node error occured";
+
+"confirmView.title" = "SEND";
+
+"confirmView.subTitle" = "Enter PIN";
+
+"confirmView.button.next" = "Confirm";
+
+"newWalletView.button.new" = "New Wallet";
+
+"newWalletView.button.recover" = "Recover Wallet";
+
+"pinView.title" = "iVault";
+
+"pinView.subTitle" = "PIN";
+
+"pinView.instruction" = "Set a PIN. If you forget your PIN you must restore your wallet from the seed you wrote down.";
+
+"pinView.button.next" = "Next";
+
+"pinConfirmView.title"  = "iVault";
+
+"pinConfirmView.subTitle" = "Confirm PIN";
+
+"pinConfirmView.instruction" = "Confirm your PIN which you entered before.";
+
+"pinConfirmView.button.next" = "Next";
+
+"seedView.instruction" = "Write down the following 25 words.\nThis is the only way to restore your wallet if you lose your device or forget your PIN.";
+
+"seedView.button.next" = "Create";
+
+"recoverySeedView.subTitle" = "Import Seed";
+
+"recoverySeedView.button.next" = "Create";
+
+"recoverySeedView.instruction" = "Enter your 25 words seed.";
+
+"settingsView.title" = "SETTINGS";
+
+"settingsView.fiat.title" = "Fiat Conversion Units";
+
+"settingsView.language.title" = "Language";
+
+"settingsView.displayRecoverySeed.title" = "Display Recovery Seed";
+
+"settingsView.displayRecoverySeed.subTitle" = "Ensure nobody can see your screen";
+
+"settingsView.displayRecoverySeed.button" = "Reveal";
+
+"settingsView.resetPin.title" = "Reset PIN";
+
+"settingsView.resetPin.button" = "Change";
+
+"settingsView.tfaSupport.title" = "Two Factor Authentication";
+
+"settingsView.tfaSupport.button" = "Configure 2FA Support";
+
+"settingsView.selectNode.title" = "Select Node";
+
+"settingsView.selectNode.subTitle" = "Select a node you trust";
+
+"settingsView.selectNode.button" = "Choose";
+
+"settingsView.nukeXWallet.title" = "Nuke vault";
+
+"settingsView.nukeXWallet.subTitle" = "Remove all wallet data";
+
+"settingsView.nukeXWallet.button" = "Nuke";
+
+"settingsView.feedback.title" = "Send Feedback";
+
+"settingsView.feedback.button" = "iVault Feedback";
+
+"settingsView.feedback.messageBody" = "Hi, I am a happy iVault user and I have a question/suggestion:\n\n";
+
+"settingsView.feedback.description" = "Please check our troubleshooting web page before you send a support request.";
+
+"settingsView.feedback.showFAQTitle" = "Show FAQ";
+
+"settingsView.feedback.sendTitle" = "Send Feedback";
+
+"settingsView.privacy.title" = "Privacy";
+
+"settingsView.privacy.button" = "Open Privacy Statement";
+
+"fiatConversionUnitsView.title" = "CURRENCY";
+
+"languageView.title" = "LANGUAGE";
+
+"selectNodeView.title" = "SELECT NODE";
+
+"selectNodeView.button.defaults" = "Default";
+
+"selectNodeView.address" = "ADDRESS";
+
+"selectNodeView.userId" = "USER ID";
+
+"selectNodeView.password" = "PASSWORD";
+
+"selectNodeView.button.connect" = "Connect";
+
+"revealSeed.pinView.title" = "PIN";
+
+"revealSeed.pinView.subTitle" = "Enter PIN";
+
+"revealSeed.seedView.title" = "SEED";
+
+"nukeWallet.pinView.title" = "NUKE";
+
+"nukeWallet.pinView.subTitle" = "Nuke iVault";
+
+"nukeWallet.pinView.button.next" = "Nuke";
+
+"nukeWallet.pinView.instruction" = "Enter PIN to nuke iVault. Make sure you have your seed saved.";
+
+"appPinView.title" = "iVault";
+
+"appPinView.subTitle" = "Enter PIN";
+
+"appleWatch2faView.title" = "iVault";
+
+"appleWatch2faView.subTitle" = "Two Factor Authentication";
+
+"appleWatch2faView.instruction" = "Use your Apple Watch for 2FA";
+
+"appleWatch2faView.button.requestAuthentication" = "Request Authentication";
+
+"appleWatch2faView.button.skipAuthentication" = "Skip Apple Watch";
+
+"appleWatchPinView.title" = "iVault";
+
+"appleWatchPinView.subTitle" = "Enter Apple Watch 2FA PIN";
+
+"appleWatch2faView.message.failed" = "Please try again to request the authentication from your Apple Watch.\n\nIf this fails again skip the Apple Watch authentication and type in your 2FA pin.";
+
+"appleWatch2faView.message.notAvailable" = "Two factor authentication is not available.\n\nDid you deinstall X Wallet on the Apple Watch?\n\nThe only way to proceed is to enter your 2FA pin by skipping the Apple Watch authentication.";
+
+"appleWatch2faView.message.title" = "Authentication failed";
+
+"configure2faView.title" = "Two Factor Authentication";
+
+"configure2faView.subTitle" = "Apple Watch";
+
+"configure2faView.unbound.button" = "Enable Apple Watch 2FA";
+
+"configure2faView.unbound.instruction" = "You can enable your Apple Watch for two factor authentication.";
+
+"configure2faView.bound.button" = "Disable Apple Watch 2FA";
+
+"configure2faView.bound.instruction" = "Currently your Apple Watch is required for two factor authentication.";
+
+"configure2fa.newPinView.title" = "2FA";
+
+"configure2fa.newPinView.subTitle" = "Two Factor Authentication";
+
+"configure2fa.newPinView.instruction" = "Set a PIN which you can use if your Apple Watch is out of reach or you accidentially deleted X Wallet from your Apple Watch.";
+
+"configure2fa.newPinView.button.next" = "Next";
+
+"configure2fa.askForPinView.title" = "2FA";
+
+"configure2fa.askForPinView.subTitle" = "Two Factor Authentication";
+
+"configure2fa.askForPinView.instruction" = "Enter your Apple Watch 2FA PIN to disable Apple Watch 2FA.";
+
+"configure2fa.askForPinView.button.next" = "Next";
+
+"configure2fa.notSupported.title" = "Not Supported";
+
+"configure2fa.notSupported.message" = "Two factor authentication with an Apple Watch is not supported on your device.";
+
+"configure2fa.notInstalled.title" = "App Not Installed";
+
+"configure2fa.notInstalled.message" = "You must install X Wallet on your Apple Watch to be able to use two factor authentication.";
+
+"configure2fa.confirmPinView.title" = "2FA";
+
+"configure2fa.confirmPinView.subTitle" = "Two Factor Authentication";
+
+"configure2fa.confirmPinView.instruction" = "Retype the PIN you entered before.";
+
+"configure2fa.confirmPinView.button.next" = "Next";
+
+"changePin.checkPinView.title" = "RESET PIN";
+
+"changePin.checkPinView.subTitle" = "Current PIN";
+
+"changePin.checkPinView.button.next" = "Next";
+
+"changePin.checkPinView.instruction" = "Please enter your current PIN";
+
+"changePin.newPinView.title" = "RESET PIN";
+
+"changePin.newPinView.subTitle" = "New PIN";
+
+"changePin.newPinView.instruction" = "Set a new PIN. If you forget your PIN you must restore your wallet from the seed you wrote down.";
+
+"changePin.newPinView.button.next" = "Next";
+
+"changePin.verifyPinView.title" = "RESET PIN";
+
+"changePin.verifyPinView.subTitle" = "Verify PIN";
+
+"changePin.verifyPinView.button.next" = "Next";
+
+"changePin.verifyPinView.instruction" = "Confirm your new PIN which you entered before.";
+
+"summaryView.total" = "Total";
+
+"seedView.title" = "iVault";
+
+"seedView.subTitle" = "Seed";
+
+"age.never" = "never";
+
+"age.recent" = "recent";
+
+"age.moreThan10MinutesAgo" = "more than 10 minutes vor";
+
+"age.moreThen1HourAgo" = "more than 1 hour ago";
+
+"age.moreThan1DayAgo" = "more than 1 day ago";
+
+"transactionDirection.sent" = "sent";
+
+"transactionDirection.received" = "received";
+
+"trxState.pending" = "pending";
+
+"trxState.failed" = "failed";
+
+"global.confirmations" = "confirmations";
+
+"language.en" = "English";
+
+"language.de" = "German";
+
+"language.ru-RU" = "Russian";
+
+"appleWatch2faView.message.processing" = "Waiting for authentication response from your Apple Watch";
+
+"scanView.notSupported.title" = "Scanning not supported";
+
+"scanView.notSupported.message" = "Please use a device with a camera and give permission.";
+
+"settingsView.emailFailed.message" = "Your device could not send e-mail.\nPlease check e-mail configuration and try again.";
+
+"settingsView.emailFailed.title" = "Could Not Send Email";
+
+"legal.button.accept" = "I understand and accept";
+
+"legal.button.decline" = "I decline";
+
+"legal.decline.text" = "We are sorry, but if you do not agree with the terms and conditions you must quit Scala iVault.";
+
+"legal.title" = "Terms and conditions";
+
+"newWalletView.keychainLost" = "The keychain for Scala iVault containing your secured PIN is no longer accessible. You need to create a new wallet or recover any previous.";
+
