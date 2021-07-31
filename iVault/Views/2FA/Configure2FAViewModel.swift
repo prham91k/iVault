@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol Configure2FAVCDelegate: class {
+public protocol Configure2FAVCDelegate: AnyObject {
     func configure2FAVCBackButtonTouched()
     func configure2FAVCEnableAppleWatchTouched(viewController: UIViewController)
 }

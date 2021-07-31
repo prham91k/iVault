@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol SeedVCDelegeta: class {
+protocol SeedVCDelegeta: AnyObject {
     func seedVCButtonNextTouched()
     func seedVCButtonBackTouched()
 }

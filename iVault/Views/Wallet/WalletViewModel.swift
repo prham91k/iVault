@@ -22,6 +22,7 @@ public struct WalletViewModel {
     public let sendButtonTitle: String
     public let receiveButtonTitle: String
     public let emptyTransactionsText: String
+    public let blockChainHeight: UInt64
 
     public init(xmrAmount: String,
                 otherAmount: String,
@@ -33,7 +34,8 @@ public struct WalletViewModel {
                 configButtonTitle: String,
                 sendButtonTitle: String,
                 receiveButtonTitle: String,
-                emptyTransactionsText: String)
+                emptyTransactionsText: String,
+                blockChainHeight: UInt64)
     {
         self.xmrAmount = xmrAmount
         self.otherAmount = otherAmount
@@ -47,5 +49,6 @@ public struct WalletViewModel {
         self.sendButtonTitle = sendButtonTitle
         self.receiveButtonTitle = receiveButtonTitle
         self.emptyTransactionsText = emptyTransactionsText
+        self.blockChainHeight = blockChainHeight
     }
 }

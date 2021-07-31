@@ -58,7 +58,6 @@ class WalletVC: UIViewController {
     
     private var syncIsInProgress = false
     private var hasLockedBalance = false
-    private var blockChainHeight = Double(0)
 
     public func refresh() {
         self.updateControls()
@@ -95,7 +94,6 @@ class WalletVC: UIViewController {
         self.progressView.setProgress(Float(percent) / 100.0, animated: true)
         self.progressView.isHidden = false
         self.heightLabel.text = "Height: \(String(format: "%.0f", current)) / \(String(format: "%.0f", max))"
-        self.blockChainHeight = max;
 
         self.syncIsInProgress = true
         self.updateSendButtons()
@@ -105,9 +103,12 @@ class WalletVC: UIViewController {
         if let viewTitle = self.viewModel?.viewTitle {
             self.viewTitleLabel.text = viewTitle
         }
+//        heightLabel.text = "Height: \(String(format: "%.0f", viewModel.blockChainHeight))"
+
 //        self.progressView.isHidden = true
         self.progressView.setProgress(1, animated: true)
-        self.heightLabel.text =  String(format: "Height: %.0f", self.blockChainHeight)
+        let height = Double(self.viewModel?.blockChainHeight ?? 0)
+        self.heightLabel.text =  String(format: "Height: %.0f",height);
 
         self.syncIsInProgress = false
         self.updateSendButtons()
@@ -198,9 +199,10 @@ class WalletVC: UIViewController {
         if !viewModel.history.isEmpty {
             self.emptyTransactionsLabel.isHidden = true
         }
-
+        
         xmrAmountLabel.text = viewModel.xmrAmount
-       
+
+
         otherAmountLabel.text = "\(viewModel.otherCurrency) \(viewModel.otherAmount)"
         historyTableView.reloadData()
     }

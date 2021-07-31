@@ -37,13 +37,13 @@ public class Constants {
     public static let defaultNodeUserId = ""
     public static let defaultNodePassword = ""
     
-    public static let donationWalletAddress = "Ssy2HXpWZ9RhXbb9uNFTeHjaYfexa3suDbGJDSfUWSEpSajSmjQXwLh2xqCAAUQfZrdiRkvpUZvBceT8d6zKc6aV9NaZVYXFsY"
-    public static let feedbackEmail = "support@scalaproject.io"
+    public static let donationWalletAddress = "Ssy2ARVhNB5NqyqV5UCQAS4ZTVq582h24GA9zcDyoyPWbyRrDKryee9c8ij4DTLn8ZWdVgWSbzrMoGo66QRcuuNk5ReBmiNJSb"
+    public static let feedbackEmail = "hello@scalaproject.io"
     
     public static let fiatProviderUri = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=XLA&tsyms=%@"
     public static let fiatUpdateIntervalInSeconds = 120
     
-    public static let feeProviderUri = "http://mine.scalaproject.io:8000/json_rpc"
+    public static let feeProviderUri = "http://nodes.scalaproject.io:11812/json_rpc"
     public static let feeUpdateIntervalInSeconds = 60
     public static let estimatedMessageSizeInKB: Int = 13
 

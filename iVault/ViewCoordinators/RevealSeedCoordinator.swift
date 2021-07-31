@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public protocol RevealSeedCoordinatorDelegate: class {
+public protocol RevealSeedCoordinatorDelegate: AnyObject {
     func revealSeedCoordinatorDone(revealSeedCoordinator: RevealSeedCoordinator)
 }
 

@@ -33,6 +33,7 @@ public protocol WalletProtocol {
     var balance: UInt64 { get }
     var unlockedBalance: UInt64 { get }
     var history: TransactionHistory { get }
+    var height: UInt64 { get }
 }
 
 
@@ -160,6 +161,10 @@ extension Wallet: WalletProtocol {
                                                walletHeight: walletHeight,
                                                blockChainHeight: blockChainHeight)
         }
+    }
+    
+    public var height: UInt64 {
+        return monero_getBlockchainHeight();
     }
 
     private static var initialHeight: UInt64 = 0

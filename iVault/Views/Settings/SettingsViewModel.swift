@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-protocol SettingsVCProtocol: class {
+protocol SettingsVCProtocol: AnyObject {
     func settingsVCBackButtonTouched()
     func settingsVCFiatConversionUnitsSelectionTouched()
     func settingsVCLanguageSelectionTouched()

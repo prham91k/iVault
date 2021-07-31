@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol LegalVCDelegate: class {
+public protocol LegalVCDelegate: AnyObject {
     func legalVCAcceptButtonTouched(viewController: LegalVC)
     func legalVCDeclineButtonTouched(viewController: LegalVC)
 }

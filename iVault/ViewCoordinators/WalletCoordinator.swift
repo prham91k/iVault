@@ -110,7 +110,9 @@ public class WalletCoordinator: Coordinator {
                                               configButtonTitle: "",
                                               sendButtonTitle: self.localizer.localized("walletView.button.send"),
                                               receiveButtonTitle: self.localizer.localized("walletView.button.receive"),
-                                              emptyTransactionsText: self.localizer.localized("walletView.emptyInformation"))
+                                              emptyTransactionsText: self.localizer.localized("walletView.emptyInformation"),
+                                              blockChainHeight: self.moneroBag.wallet?.height ?? 0
+                                              )
         return walletViewModel
     }
     
