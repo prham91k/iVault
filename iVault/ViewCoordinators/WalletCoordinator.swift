@@ -97,14 +97,22 @@ public class WalletCoordinator: Coordinator {
         
         let xmrBalance = CoinFormatter.format(atomicAmount: wallet.balance,
                                              numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
+        let unlockBalance = CoinFormatter.format(atomicAmount: wallet.unlockedBalance,
+                                                 numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
+        
         let history = wallet.history
-        let hasLockedBalance = wallet.balance != wallet.unlockedBalance
+        
+        let lockAmount = wallet.balance - wallet.unlockedBalance
+        let hasLockedBalance = (lockAmount <= Constants.atomicUnitsPerMonero)
+        
+        Debug.print(s: "Have locked balance \(lockAmount)")
         
         let walletViewModel = WalletViewModel(xmrAmount: xmrBalance,
                                               otherAmount: self.otherAmount(forXMRValue: self.moneroBag.wallet?.balance),
                                               otherCurrency: self.propertyStore.currency,
                                               history: history.all,
                                               hasLockedBalance: hasLockedBalance,
+                                              unlockBalance:unlockBalance,
                                               viewTitle: self.localizer.localized("walletView.title"),
                                               viewTitelSyncing: self.localizer.localized("walletView.title.syncing"),
                                               configButtonTitle: "",
@@ -608,7 +616,7 @@ extension WalletCoordinator: PaymentIdVCDelegate {
         let available = self.moneroBag.wallet?.balance ?? 0
         let requested = self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0
         
-        Debug.print(s: "A: \(available) R: \(requested) P: \(self.moneroBag.payment?.keyOfPendingTransaction)")
+        Debug.print(s: "A: \(available) R: \(requested) P: \(String(describing: self.moneroBag.payment?.keyOfPendingTransaction))")
 
         guard let key = self.moneroBag.payment?.keyOfPendingTransaction else {
             return false

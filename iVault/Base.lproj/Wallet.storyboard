@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="width" constant="30" id="vT8-HH-ueZ"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="pencil" catalog="system"/>
+                                        <state key="normal" image="gearshape" catalog="system"/>
                                         <connections>
                                             <action selector="settingsButtonTouched" destination="680-WI-waP" eventType="touchUpInside" id="mfO-sz-eEZ"/>
                                         </connections>
@@ -81,6 +81,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Height: 0 / 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RXE-wJ-SGs">
                                         <rect key="frame" x="0.0" y="-2" width="414" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Unlock: 0XLA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BYe-ES-bOm" userLabel="Unlock : 0 XLA">
+                                        <rect key="frame" x="0.0" y="-3" width="414" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -396,6 +403,7 @@
                         <outlet property="sendButtonStackView" destination="yBg-67-NDu" id="bwo-zo-2Gv"/>
                         <outlet property="sendButtonView" destination="0tk-iJ-CPf" id="VVO-RG-5XM"/>
                         <outlet property="tabBarView" destination="awH-EY-jwU" id="V6i-43-PbL"/>
+                        <outlet property="unlockLabel" destination="BYe-ES-bOm" id="ta0-jU-MrB"/>
                         <outlet property="viewTitleLabel" destination="GRu-qE-SLn" id="Osx-9A-1B6"/>
                         <outlet property="xmrAmountLabel" destination="Zx0-V0-Trv" id="NAn-Es-B8x"/>
                     </connections>
@@ -1375,29 +1383,6 @@
             <point key="canvasLocation" x="2420" y="1768"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="0Yk-3h-y3a">
-            <size key="intrinsicContentSize" width="58" height="33"/>
-        </designable>
-        <designable name="AOD-QY-gTa">
-            <size key="intrinsicContentSize" width="374" height="33"/>
-        </designable>
-        <designable name="S6y-lW-QKW">
-            <size key="intrinsicContentSize" width="127" height="33"/>
-        </designable>
-        <designable name="dnf-dD-H5X">
-            <size key="intrinsicContentSize" width="230" height="33"/>
-        </designable>
-        <designable name="oOo-hy-x0l">
-            <size key="intrinsicContentSize" width="159" height="33"/>
-        </designable>
-        <designable name="qTz-H4-fEP">
-            <size key="intrinsicContentSize" width="184" height="33"/>
-        </designable>
-        <designable name="s1D-if-HI2">
-            <size key="intrinsicContentSize" width="78" height="33"/>
-        </designable>
-    </designables>
     <resources>
         <image name="BalanceBackground" width="27" height="26"/>
         <image name="ButtonBackgrond" width="28" height="26"/>
@@ -1405,10 +1390,10 @@
         <image name="ReceivedTransactionIcon" width="15" height="15"/>
         <image name="TransactionClockIcon" width="12" height="12"/>
         <image name="TransactionDirectionBackground" width="69" height="104"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
         <image name="moneroIcon" width="63" height="63"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

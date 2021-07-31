@@ -33,6 +33,7 @@ class WalletVC: UIViewController {
     @IBOutlet weak var emptyTransactionsLabel: UILabel!
     @IBOutlet weak var tabBarView: UIView!
     @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var unlockLabel: UILabel!
     // Container handler used for gesture recognizer
     @IBOutlet weak var sendButtonStackView: UIStackView!
     @IBOutlet weak var receiveButtonStackView: UIStackView!
@@ -103,12 +104,7 @@ class WalletVC: UIViewController {
         if let viewTitle = self.viewModel?.viewTitle {
             self.viewTitleLabel.text = viewTitle
         }
-//        heightLabel.text = "Height: \(String(format: "%.0f", viewModel.blockChainHeight))"
 
-//        self.progressView.isHidden = true
-        self.progressView.setProgress(1, animated: true)
-        let height = Double(self.viewModel?.blockChainHeight ?? 0)
-        self.heightLabel.text =  String(format: "Height: %.0f",height);
 
         self.syncIsInProgress = false
         self.updateSendButtons()
@@ -202,8 +198,18 @@ class WalletVC: UIViewController {
         
         xmrAmountLabel.text = viewModel.xmrAmount
 
-
         otherAmountLabel.text = "\(viewModel.otherCurrency) \(viewModel.otherAmount)"
+        
+        self.progressView.isHidden = true
+        
+        if(!syncIsInProgress) {
+            self.progressView.setProgress(1, animated: true)
+            let height = Double(self.viewModel?.blockChainHeight ?? 0)
+            self.heightLabel.text =  String(format: "Height: %.0f",height);
+        }
+        
+        self.unlockLabel.text = "Unlock : \(self.viewModel?.unlockBalance ?? "0.00") XLA"
+        
         historyTableView.reloadData()
     }
     
@@ -237,7 +243,7 @@ class WalletVC: UIViewController {
             return
         }
         sendButtonView.isUserInteractionEnabled = false
-        sendButtonStackView.alpha = 0.5
+        sendButtonStackView.alpha = 0.25
     }
 }
 

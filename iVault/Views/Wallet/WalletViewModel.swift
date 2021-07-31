@@ -15,6 +15,7 @@ public struct WalletViewModel {
     public let otherCurrency: String
     public let history: [TransactionItem]
     public let hasLockedBalance: Bool
+    public let unlockBalance: String
 
     public let viewTitle: String
     public let viewTitleSyncing: String
@@ -29,6 +30,7 @@ public struct WalletViewModel {
                 otherCurrency: String,
                 history: [TransactionItem],
                 hasLockedBalance: Bool,
+                unlockBalance: String,
                 viewTitle: String,
                 viewTitelSyncing: String,
                 configButtonTitle: String,
@@ -42,7 +44,7 @@ public struct WalletViewModel {
         self.otherCurrency = otherCurrency
         self.history = history
         self.hasLockedBalance = hasLockedBalance
-
+        self.unlockBalance = unlockBalance
         self.viewTitle = viewTitle
         self.viewTitleSyncing = viewTitelSyncing
         self.configButtonTitle = configButtonTitle
