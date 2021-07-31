@@ -202,7 +202,7 @@ class WalletVC: UIViewController {
         
         self.progressView.isHidden = true
         
-        if(!syncIsInProgress) {
+        if(!self.syncIsInProgress) {
             self.progressView.setProgress(1, animated: true)
             let height = Double(self.viewModel?.blockChainHeight ?? 0)
             self.heightLabel.text =  String(format: "Height: %.0f",height);
