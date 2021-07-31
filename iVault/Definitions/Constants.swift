@@ -38,7 +38,7 @@ public class Constants {
     public static let defaultNodePassword = ""
     
     public static let donationWalletAddress = "Ssy2HXpWZ9RhXbb9uNFTeHjaYfexa3suDbGJDSfUWSEpSajSmjQXwLh2xqCAAUQfZrdiRkvpUZvBceT8d6zKc6aV9NaZVYXFsY"
-    public static let feedbackEmail = "support@scalaproject.io"
+    public static let feedbackEmail = "hello@scalaproject.io"
     
     public static let fiatProviderUri = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=XLA&tsyms=%@"
     public static let fiatUpdateIntervalInSeconds = 120
@@ -47,6 +47,6 @@ public class Constants {
     public static let feeUpdateIntervalInSeconds = 60
     public static let estimatedMessageSizeInKB: Int = 13
 
-    public static let troubleShootingLink = "https://gitlab.com/rusticbison/xwallet#troubleshooting"
-    public static let privacyStatementLink = "https://gitlab.com/rusticbison/xwallet/blob/master/PRIVACY"
+    public static let troubleShootingLink = "https://github.com/scala-network/iVault/blob/main/docs/xwallet.md#troubleshooting"
+    public static let privacyStatementLink = "https://github.com/scala-network/iVault/blob/main/PRIVACY.md"
 }
