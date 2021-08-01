@@ -114,7 +114,7 @@
 
 "newWalletView.button.new" = "New Wallet";
 
-"newWalletView.button.recover" = "Recover Wallet";
+"newWalletView.button.recover" = "Restore Wallet";
 
 "pinView.title" = "iVault";
 
@@ -364,3 +364,4 @@
 
 "newWalletView.keychainLost" = "The keychain for Scala iVault containing your secured PIN is no longer accessible. You need to create a new wallet or recover any previous.";
 
+"newWalletView.intro" = "Please choose either to create a new wallet or restore from seed";

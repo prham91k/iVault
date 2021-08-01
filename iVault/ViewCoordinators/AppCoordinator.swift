@@ -64,7 +64,6 @@ public class AppCoordinator: Coordinator {
             self.navigationController.popToRootViewController(animated: true)
             self.handleLegal()
         }
-//        self.handleLegal()
     }
 
     private func startWallet() {

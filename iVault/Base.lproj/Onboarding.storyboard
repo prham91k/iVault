@@ -20,12 +20,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36J-CJ-uWj" userLabel="BackButton">
-                                        <rect key="frame" x="8" y="7" width="63" height="30"/>
+                                        <rect key="frame" x="8" y="7" width="65.666666666666671" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="AQE-Mv-wa8"/>
                                             <constraint firstAttribute="height" constant="30" id="MJU-G4-eV1"/>
                                         </constraints>
-                                        <state key="normal" title="!!Back" image="BackButtonArrow">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="!!Back" image="lessthan" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -69,52 +70,129 @@
                                     <constraint firstItem="enz-st-o6r" firstAttribute="trailing" secondItem="k3w-Qc-kgS" secondAttribute="trailing" constant="-8" id="gX7-lJ-0yD"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-ub-EmM">
-                                <rect key="frame" x="30" y="326" width="315" height="160.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-ub-EmM">
+                                <rect key="frame" x="30" y="118" width="315" height="660"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P91-hx-NJ2">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSk-F9-GkJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="46"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="6Kp-gB-UzB">
+                                                <rect key="frame" x="1" y="-1" width="315" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="mZU-Nw-Acy"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-PB-eZM">
+                                        <rect key="frame" x="0.0" y="56" width="315" height="38.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-VR-fNc" customClass="XWButton" customModule="iVault" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40.333333333333314" width="315" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LBW-gD-k2P">
+                                        <rect key="frame" x="0.0" y="104.33333333333331" width="315" height="555.66666666666674"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A secure and lightweight wallet to store your Scala coins" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRd-yE-bcV">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="52.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scala Vault provides everything you need for managing and using Scala wallets on IOS " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-gv-hvW">
+                                                <rect key="frame" x="0.0" y="82.666666666666657" width="315" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P91-hx-NJ2">
+                                                <rect key="frame" x="0.0" y="148.66666666666666" width="315" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="auM-Ia-T72">
+                                                <rect key="frame" x="0.0" y="196.66666666666666" width="315" height="109.99999999999997"/>
+                                                <subviews>
+                                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-VR-fNc" customClass="XWButton" customModule="iVault" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zge-uF-gKO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <state key="normal" title="!!New Wallet" backgroundImage="BalanceBackground">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="newWalletButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7F-f6-0PK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-Kp-jnT" customClass="XWButton" customModule="iVault" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="60" width="315" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="jAw-tN-3SU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <state key="normal" title="!!Recover Wallet" backgroundImage="ButtonBackgrond">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="recoverWalletButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8I-yk-UWL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="Rp2-bS-JOY"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-te-cfc">
+                                                <rect key="frame" x="0.0" y="336.66666666666663" width="315" height="219"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-24-eMk">
+                                                        <rect key="frame" x="121" y="145" width="73" height="18"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="18" id="pZw-67-VJ5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <state key="normal" title="Privacy Policy"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We care about your privacy. To learn more please read our" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-4b-mHe">
+                                                        <rect key="frame" x="0.0" y="79" width="315" height="66"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="66" id="KTX-Xb-EUw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="6dk-24-eMk" firstAttribute="centerX" secondItem="Cf5-4b-mHe" secondAttribute="centerX" id="JcA-sQ-Hn5"/>
+                                                    <constraint firstItem="Cf5-4b-mHe" firstAttribute="leading" secondItem="Sjd-te-cfc" secondAttribute="leading" id="Ngy-YJ-ine"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Cf5-4b-mHe" secondAttribute="bottom" constant="74" id="Txc-q7-Ypn"/>
+                                                    <constraint firstItem="6dk-24-eMk" firstAttribute="top" secondItem="Cf5-4b-mHe" secondAttribute="bottom" id="USc-Gi-TEE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Cf5-4b-mHe" secondAttribute="trailing" id="ifl-23-yWi"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="zge-uF-gKO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sjd-te-cfc" secondAttribute="trailing" id="vPO-XU-k5C"/>
+                                            <constraint firstItem="Sjd-te-cfc" firstAttribute="leading" secondItem="LBW-gD-k2P" secondAttribute="leading" id="vgf-zn-Hg7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="!!New Wallet">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="newWalletButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7F-f6-0PK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-Kp-jnT" customClass="XWButton" customModule="iVault" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110.33333333333331" width="315" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="jAw-tN-3SU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="!!Recover Wallet">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="recoverWalletButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8I-yk-UWL"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="P91-hx-NJ2" secondAttribute="trailing" id="4mc-6v-L7f"/>
-                                    <constraint firstItem="MVK-VR-fNc" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="6t9-bL-Oj8"/>
-                                    <constraint firstItem="h0y-Kp-jnT" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="9r5-5A-EEd"/>
-                                    <constraint firstAttribute="trailing" secondItem="MVK-VR-fNc" secondAttribute="trailing" id="Myx-l5-GgR"/>
-                                    <constraint firstItem="MVK-VR-fNc" firstAttribute="top" secondItem="P91-hx-NJ2" secondAttribute="bottom" constant="20" id="bsp-hN-01d"/>
-                                    <constraint firstItem="P91-hx-NJ2" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="lte-WE-grA"/>
-                                    <constraint firstAttribute="trailing" secondItem="h0y-Kp-jnT" secondAttribute="trailing" id="oeE-Re-vn9"/>
+                                    <constraint firstItem="ev8-PB-eZM" firstAttribute="leading" secondItem="YSk-F9-GkJ" secondAttribute="trailing" constant="-315" id="6B7-Uv-j5q"/>
+                                    <constraint firstItem="YSk-F9-GkJ" firstAttribute="centerX" secondItem="5vB-ub-EmM" secondAttribute="centerX" id="D6h-S9-6Dw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ev8-PB-eZM" secondAttribute="trailing" id="Fbh-gr-F2j"/>
+                                    <constraint firstItem="YSk-F9-GkJ" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="HPy-sb-ncN"/>
+                                    <constraint firstAttribute="trailing" secondItem="LBW-gD-k2P" secondAttribute="trailing" id="RWp-tY-x6C"/>
+                                    <constraint firstItem="YSk-F9-GkJ" firstAttribute="top" secondItem="5vB-ub-EmM" secondAttribute="top" id="eUb-fO-NGu"/>
+                                    <constraint firstItem="LBW-gD-k2P" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="jWJ-sN-5X9"/>
+                                    <constraint firstItem="ev8-PB-eZM" firstAttribute="leading" secondItem="5vB-ub-EmM" secondAttribute="leading" id="rGo-FO-bEw"/>
+                                    <constraint firstAttribute="bottom" secondItem="LBW-gD-k2P" secondAttribute="bottom" id="yim-Sh-eSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="YSk-F9-GkJ" secondAttribute="trailing" id="z2y-y6-5Cj"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -122,14 +200,17 @@
                         <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="k3w-Qc-kgS" firstAttribute="leading" secondItem="Tek-2H-EIU" secondAttribute="leading" id="ItP-ZT-hvJ"/>
+                            <constraint firstItem="5vB-ub-EmM" firstAttribute="leading" secondItem="Tek-2H-EIU" secondAttribute="leading" constant="30" id="N4k-y7-H8K"/>
+                            <constraint firstItem="5vB-ub-EmM" firstAttribute="centerX" secondItem="k3w-Qc-kgS" secondAttribute="centerX" id="VAO-NK-Fix"/>
                             <constraint firstItem="k3w-Qc-kgS" firstAttribute="top" secondItem="Tek-2H-EIU" secondAttribute="top" id="ZJm-kC-6Bo"/>
-                            <constraint firstItem="5vB-ub-EmM" firstAttribute="leading" secondItem="Tek-2H-EIU" secondAttribute="leading" constant="30" id="f35-ta-j69"/>
                             <constraint firstItem="k3w-Qc-kgS" firstAttribute="trailing" secondItem="Tek-2H-EIU" secondAttribute="trailing" id="iKr-NO-l8P"/>
+                            <constraint firstItem="Tek-2H-EIU" firstAttribute="bottom" secondItem="Sjd-te-cfc" secondAttribute="bottom" id="kRa-43-OZV"/>
+                            <constraint firstItem="Tek-2H-EIU" firstAttribute="bottom" secondItem="5vB-ub-EmM" secondAttribute="bottom" id="ozY-Wp-I9n"/>
                             <constraint firstItem="Tek-2H-EIU" firstAttribute="trailing" secondItem="5vB-ub-EmM" secondAttribute="trailing" constant="30" id="qn5-gY-fQJ"/>
-                            <constraint firstItem="5vB-ub-EmM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tWO-li-PvY"/>
+                            <constraint firstItem="5vB-ub-EmM" firstAttribute="top" secondItem="k3w-Qc-kgS" secondAttribute="bottom" constant="30" id="tK1-BX-VJW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="X WALLET" id="cCF-iS-hGI"/>
+                    <navigationItem key="navigationItem" title="Vault" id="cCF-iS-hGI"/>
                     <connections>
                         <outlet property="keychainListLabel" destination="P91-hx-NJ2" id="4PT-1s-x2Z"/>
                         <outlet property="newWalletButton" destination="MVK-VR-fNc" id="BoE-AJ-A3L"/>
@@ -138,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="68"/>
+            <point key="canvasLocation" x="784.79999999999995" y="67.980295566502463"/>
         </scene>
         <!--Seed-->
         <scene sceneID="7Uy-Ql-xwt">
@@ -152,12 +233,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQz-HJ-Dvw" userLabel="BackButton">
-                                        <rect key="frame" x="8" y="7" width="63" height="30"/>
+                                        <rect key="frame" x="8" y="7" width="65.666666666666671" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Hgi-IG-yOp"/>
                                             <constraint firstAttribute="height" constant="30" id="Sf5-3P-9ww"/>
                                         </constraints>
-                                        <state key="normal" title="!!Back" image="BackButtonArrow">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="!!Back" image="lessthan" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -507,12 +589,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNl-61-wPQ" userLabel="BackButton">
-                                        <rect key="frame" x="8" y="7" width="63" height="30"/>
+                                        <rect key="frame" x="8" y="7" width="65.666666666666671" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="7hs-Ms-Y6d"/>
                                             <constraint firstAttribute="height" constant="30" id="Ad4-DG-hO7"/>
                                         </constraints>
-                                        <state key="normal" title="!!Back" image="BackButtonArrow">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="!!Back" image="lessthan" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -654,12 +737,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRB-8Q-egd" userLabel="BackButton">
-                                        <rect key="frame" x="8" y="7" width="63" height="30"/>
+                                        <rect key="frame" x="8" y="7" width="65.666666666666671" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ewF-72-PhA"/>
                                             <constraint firstAttribute="height" constant="30" id="lDW-H9-Gxx"/>
                                         </constraints>
-                                        <state key="normal" title="!!Back" image="BackButtonArrow">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="!!Back" image="lessthan" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -750,10 +834,10 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-SZ-urW" userLabel="Seed">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-SZ-urW" userLabel="Seed">
                                         <rect key="frame" x="0.0" y="160" width="343" height="91"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-Y0-dZq">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-Y0-dZq">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="91"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -771,10 +855,10 @@
                                             <constraint firstItem="gIN-Y0-dZq" firstAttribute="top" secondItem="Jtx-SZ-urW" secondAttribute="top" id="iRY-fz-wRu"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CUH-cC-9kP" userLabel="Bottom filler">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CUH-cC-9kP" userLabel="Bottom filler">
                                         <rect key="frame" x="0.0" y="261" width="343" height="369"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4m-ma-gGB">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4m-ma-gGB">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="369"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -785,6 +869,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="CUH-cC-9kP" firstAttribute="top" secondItem="Svj-VY-heV" secondAttribute="top" constant="261" id="LXU-kp-D0R"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QoL-gp-zNE"/>
@@ -814,6 +901,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackButtonArrow" width="13" height="22"/>
+        <image name="BalanceBackground" width="27" height="26"/>
+        <image name="ButtonBackgrond" width="28" height="26"/>
+        <image name="Logo" width="106" height="86"/>
+        <image name="lessthan" catalog="system" width="128" height="111"/>
     </resources>
 </document>

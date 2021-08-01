@@ -833,14 +833,6 @@
 			name = ExtensionsTests;
 			sourceTree = "<group>";
 		};
-		EE5D016E1F3E030F00E41AED /* _Main */ = {
-			isa = PBXGroup;
-			children = (
-				EEE1D5011F29153400D464C3 /* AppDelegate.swift */,
-			);
-			name = _Main;
-			sourceTree = "<group>";
-		};
 		EE5D01701F4030A800E41AED /* MoneroLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1516,9 +1508,9 @@
 		EEE1D5001F29153400D464C3 /* iVault */ = {
 			isa = PBXGroup;
 			children = (
+				EEE1D5011F29153400D464C3 /* AppDelegate.swift */,
 				EEE1D5081F29153400D464C3 /* Assets.xcassets */,
 				5C70A48E269B30DA009BA364 /* iVault.entitlements */,
-				EE5D016E1F3E030F00E41AED /* _Main */,
 				EE512A8720E8C9E8000EDBC3 /* DataSources */,
 				EE47C0881F9CA191000DCC39 /* Definitions */,
 				EE43E8EB1F65E5D100AE5161 /* Errors */,

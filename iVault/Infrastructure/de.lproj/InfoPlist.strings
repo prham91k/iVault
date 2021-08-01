@@ -364,3 +364,4 @@
 
 "newWalletView.keychainLost" = "Es tut uns sehr leid, aber ...\n\nTL;DR Die Keychain, in der iVault den verschlüsselt PIN abspeichert, ist nicht mehr zugänglich. Du musst eine neue Wallet anlegen oder eine vorherige wiederherstellen.\n\nWARUM??? Wir haben iVault von einem App Store Account in einen anderen migriert. Das erzeugt leider eine neue App Id. Und dass verhindert den Zugriff auf die Keychain der vorherigen App Id.";
 
+"newWalletView.intro" = "Bitte wählen Sie, ob Sie eine neue Wallet erstellen oder aus dem Seed wiederherstellen möchten";

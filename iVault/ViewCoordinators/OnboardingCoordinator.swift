@@ -64,7 +64,7 @@ public class OnboardingCoordinator: Coordinator {
         vc.delegate = self
         vc.newWalletButtonTitle = self.localizer.localized("newWalletView.button.new")
         vc.recoverWalletButtonTitle = self.localizer.localized("newWalletView.button.recover")
-        vc.keychainLostLabelText = keychainLost ? self.localizer.localized("newWalletView.keychainLost") : nil
+        vc.keychainLostLabelText = keychainLost ? self.localizer.localized("newWalletView.keychainLost") : self.localizer.localized("newWalletView.intro")
         self.navigationController.pushViewController(vc, animated: true)
     }
 }
