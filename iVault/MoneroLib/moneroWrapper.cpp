@@ -309,18 +309,26 @@ monero_history* monero_getTrxHistory() {
     moneroHistory->transactions = new monero_trx*[moneroHistory->numberOfTransactions];
     
     for (std::size_t i = 0; i < history->count(); ++i) {
-        Scala::TransactionInfo *transactionInfo = allTransactionInfo[i];
-        monero_trx *trx = new monero_trx;
-        trx->direction = (monero_trxDirection)transactionInfo->direction();
-        trx->isPending = transactionInfo->isPending();
-        trx->isFailed = transactionInfo->isFailed();
-        trx->amount = transactionInfo->amount();
-        trx->fee = transactionInfo->fee();
-        trx->confirmations = transactionInfo->confirmations();
-        trx->timestamp = transactionInfo->timestamp();
-        trx->height = transactionInfo->blockHeight();
-        //std::cout << "Transaction amount : " << trx->amount << '\n';
-        moneroHistory->transactions[i] = trx;
+        try{
+            Scala::TransactionInfo *transactionInfo = allTransactionInfo[i];
+            monero_trx *trx = new monero_trx;
+            trx->direction = (monero_trxDirection)transactionInfo->direction();
+            trx->isPending = transactionInfo->isPending();
+            trx->isFailed = transactionInfo->isFailed();
+            trx->amount = transactionInfo->amount();
+            trx->fee = transactionInfo->fee();
+            trx->confirmations = transactionInfo->confirmations();
+            trx->timestamp = transactionInfo->timestamp();
+            trx->height = transactionInfo->blockHeight();
+            //std::cout << "Transaction amount : " << trx->amount << '\n';
+            moneroHistory->transactions[i] = trx;
+        } catch(...) {
+#ifdef DEBUG
+        std::cout << "ERROR FETCHING HISTORY \n";
+        std::cout << monero_errorString() << "\n";
+#endif
+            continue;
+        }
     }
     
     return moneroHistory;
@@ -372,7 +380,9 @@ int64_t monero_createTransaction(const char* dstAddress,
 {
     
     if (!monero_wallet) {
+#ifdef DEBUG
         std::cout << "ERROR MONERO WALLET NOT FOUND" << "\n";
+#endif
         return -1;
     }
     
@@ -384,12 +394,16 @@ int64_t monero_createTransaction(const char* dstAddress,
      (Scala::PendingTransaction::Priority)priority);
     
     if (!pendingTransaction) {
+#ifdef DEBUG
         std::cout << "ERROR NO PENDING TRANSACTION" << "\n";
+#endif
         return -1;
     }
     if (pendingTransaction->status() != Status_Ok) {
+#ifdef DEBUG
         std::cout << "ERROR PENDING TRANSACTION STATUS NOT OK "  << pendingTransaction->status() << "\n";
         std::cout << monero_errorString() << "\n";
+#endif
         return -1;
     }
 
