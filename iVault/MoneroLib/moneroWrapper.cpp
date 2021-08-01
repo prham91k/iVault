@@ -108,7 +108,9 @@ bool monero_recoverWalletFromSeed(const char* pathWithFileName,
 
 bool monero_openExistingWallet(const char* pathWithFileName, const char* password)
 {
+#ifdef DEBUG
     auto start = std::chrono::high_resolution_clock::now();
+#endif
 
     Scala::WalletManagerFactory::setLogLevel(monero_logLevel);
     Scala::WalletManagerFactory::setLogCategories("");

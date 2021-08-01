@@ -2150,7 +2150,7 @@
 				CODE_SIGN_ENTITLEMENTS = iVault/iVault.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.5.86;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2164,7 +2164,7 @@
 					"$(PROJECT_DIR)/iVault/external-libs/libsodium",
 					"$(PROJECT_DIR)/iVault/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 0.2.5;
+				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = (
 					"-IiVault/MoneroLib/",
 					"-IiVault/CLib/",
@@ -2189,7 +2189,7 @@
 				CODE_SIGN_ENTITLEMENTS = iVault/iVault.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.5.86;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = SCZBS92MLG;
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -2203,7 +2203,7 @@
 					"$(PROJECT_DIR)/iVault/external-libs/libsodium",
 					"$(PROJECT_DIR)/iVault/external-libs/monero_v0.15",
 				);
-				MARKETING_VERSION = 0.2.5;
+				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = (
 					"-IiVault/MoneroLib/",
 					"-IiVault/CLib/",
