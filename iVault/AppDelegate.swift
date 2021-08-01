@@ -94,10 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
         if self.propertyStore.onboardingIsFinished {
-            let _todo = "ask for app pin to unlock app"
+            //@@TODO "ask for app pin to unlock app"
 
             guard let walletPassword = secureStore.walletPassword else {
-                let _todo_2 = "error: no wallet password found"
+                //@@TODO "error: no wallet password found"
                 return
             }
             
