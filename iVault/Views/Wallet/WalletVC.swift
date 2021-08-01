@@ -200,12 +200,12 @@ class WalletVC: UIViewController {
 
         otherAmountLabel.text = "\(viewModel.otherCurrency) \(viewModel.otherAmount)"
         
-        self.progressView.isHidden = true
+        self.progressView.isHidden = false
         
-        if(!self.syncIsInProgress) {
+        if !self.syncIsInProgress {
             self.progressView.setProgress(1, animated: true)
             let height = Double(self.viewModel?.blockChainHeight ?? 0)
-            self.heightLabel.text =  String(format: "Height: %.0f",height);
+            self.heightLabel.text =  String(format: "Height: %.0f",height)
         }
         
         self.unlockLabel.text = "Unlock : \(self.viewModel?.unlockBalance ?? "0.00") XLA"
