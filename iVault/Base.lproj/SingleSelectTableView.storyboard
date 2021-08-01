@@ -56,7 +56,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="56" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RM6-Xm-diU">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
-                                <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleSelectionCell" rowHeight="60" id="Ip6-U8-mLz" customClass="SingleSelectionCell" customModule="iVault" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="60"/>
@@ -78,14 +78,19 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="69" height="54"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-AR-AKi">
-                                                                    <rect key="frame" x="26" y="18.666666666666668" width="17" height="17.000000000000004"/>
+                                                                    <rect key="frame" x="7" y="4" width="55" height="46"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="17" id="10u-Oh-u3p"/>
+                                                                        <constraint firstAttribute="height" id="10u-Oh-u3p"/>
                                                                         <constraint firstAttribute="width" constant="17" id="URE-A2-tjg"/>
                                                                     </constraints>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="10u-Oh-u3p"/>
+                                                                            <exclude reference="URE-A2-tjg"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="jeS-bR-21c" secondAttribute="bottom" id="715-Pl-ehI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="jeS-bR-21c" secondAttribute="trailing" id="9qA-MX-X0K"/>
@@ -95,6 +100,11 @@
                                                                 <constraint firstItem="jeS-bR-21c" firstAttribute="leading" secondItem="Ame-rn-GMg" secondAttribute="leading" id="TGu-zj-C4Y"/>
                                                                 <constraint firstItem="jeS-bR-21c" firstAttribute="top" secondItem="Ame-rn-GMg" secondAttribute="top" id="hgC-MQ-B1s"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="subviews">
+                                                                    <exclude reference="jeS-bR-21c"/>
+                                                                </mask>
+                                                            </variation>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-hq-Njq">
                                                             <rect key="frame" x="102" y="18.666666666666668" width="233" height="21.000000000000004"/>
@@ -102,11 +112,11 @@
                                                                 <constraint firstAttribute="height" constant="21" id="Dkv-at-PKW"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="lbJ-2a-5qP" secondAttribute="bottom" id="3q1-I7-tdk"/>
                                                         <constraint firstItem="QQb-hq-Njq" firstAttribute="leading" secondItem="Ame-rn-GMg" secondAttribute="trailing" constant="30" id="7PL-fa-JkC"/>
@@ -119,6 +129,11 @@
                                                         <constraint firstItem="Ame-rn-GMg" firstAttribute="top" secondItem="cvN-x3-NMv" secondAttribute="top" constant="1" id="kSM-JK-hWm"/>
                                                         <constraint firstItem="lbJ-2a-5qP" firstAttribute="leading" secondItem="cvN-x3-NMv" secondAttribute="leading" id="rqU-f3-3Iu"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="lbJ-2a-5qP"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -138,7 +153,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b5S-3E-OTe"/>
-                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RM6-Xm-diU" secondAttribute="bottom" id="IRI-ln-BTV"/>
                             <constraint firstItem="qqT-9n-USj" firstAttribute="leading" secondItem="b5S-3E-OTe" secondAttribute="leading" id="W9E-NS-iF4"/>
@@ -161,8 +176,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Checkmark" width="18" height="13"/>
-        <image name="TransactionCellBackground" width="351" height="112"/>
+        <image name="Checkmark" width="55" height="46"/>
+        <image name="TransactionCellBackground" width="61" height="36"/>
         <image name="TransactionDirectionBackground" width="69" height="104"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
     </resources>

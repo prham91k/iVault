@@ -104,8 +104,8 @@ public class WalletCoordinator: Coordinator {
         
         let lockAmount = wallet.balance - wallet.unlockedBalance
         let hasLockedBalance = (lockAmount <= Constants.atomicUnitsPerMonero)
-        
-        Debug.print(s: "Have locked balance \(lockAmount)")
+        let height = Double(self.moneroBag.wallet?.height ?? 0)
+        Debug.print(s: "Have locked balance \(lockAmount) at height : \(height)")
         
         let walletViewModel = WalletViewModel(xmrAmount: xmrBalance,
                                               otherAmount: self.otherAmount(forXMRValue: self.moneroBag.wallet?.balance),
@@ -121,6 +121,7 @@ public class WalletCoordinator: Coordinator {
                                               emptyTransactionsText: self.localizer.localized("walletView.emptyInformation"),
                                               blockChainHeight: self.moneroBag.wallet?.height ?? 0
                                               )
+        wallet.refreshWallet();
         return walletViewModel
     }
     
@@ -211,7 +212,7 @@ extension WalletCoordinator: WalletDelegate {
     
     public func walletUpdated() {
         let vm = self.getWalletViewModel()
-        
+
         DispatchQueue.main.async {
             self.walletVC.viewModel = vm
             self.walletVC.viewModelIsUpdated()
@@ -362,9 +363,12 @@ extension WalletCoordinator: ReceipientVCDelegate {
         vc.totalAmountAvailableButtonTitle = "XLA \(formattedAmounts.available)"
         vc.balanceTitle = self.localizer.localized("amountView.balance")
         vc.balanceValueText = formattedAmounts.balance
+        
+//        vc.unlockBalanceTitle = self.localizer.localized("amountView.unlockBalance")
+//        vc.unlockBalanceValueText = formattedAmounts.unlockBalance
+        
         vc.estimatedFeeTitle = self.localizer.localized("amountView.estimatedFee")
         vc.estimatedFeeValueText = formattedAmounts.fee
-        
         self.navigationController.pushViewController(vc, animated: true)
     }
     
@@ -398,7 +402,7 @@ extension WalletCoordinator: ReceipientVCDelegate {
         let balanceFormatted = CoinFormatter.format(atomicAmount: amounts.balance, numberOfFractionDigits: Constants.numberOfFractionDigits)
         let feeFormatted = CoinFormatter.format(atomicAmount: amounts.fee, numberOfFractionDigits: Constants.numberOfFractionDigits)
         let availableFormatted = CoinFormatter.format(atomicAmount: amounts.available, numberOfFractionDigits: Constants.numberOfFractionDigits)
-
+        
         return (balance: balanceFormatted, fee: feeFormatted, available: availableFormatted)
     }
 }
@@ -613,10 +617,10 @@ extension WalletCoordinator: PaymentIdVCDelegate {
     }
     
     private func balanceIsSufficient() -> Bool {
-        let available = self.moneroBag.wallet?.balance ?? 0
+        let available = self.moneroBag.wallet?.unlockedBalance ?? 0
         let requested = self.moneroBag.payment?.amountTotalInAtomicUnits ?? 0
         
-        Debug.print(s: "A: \(available) R: \(requested) P: \(String(describing: self.moneroBag.payment?.keyOfPendingTransaction))")
+        Debug.print(s: "A: \(available) R: \(requested)")
 
         guard let key = self.moneroBag.payment?.keyOfPendingTransaction else {
             return false
@@ -664,11 +668,11 @@ extension WalletCoordinator: PinVCDelegate {
     
     public func pinVCButtonNextTouched(pinEntered pin: String, viewController: PinVC) {
         guard let key = self.moneroBag.payment?.keyOfPendingTransaction else {
-            let _todo = "notify that something went wrong"
+            //@@TODO "notify that something went wrong"
             return
         }
 
-        let _todo = "perform payment async"
+        //@@TODO "perform payment async"
         monero_commitPendingTransaction(key)
 
         self.goBackToWalletViewController()

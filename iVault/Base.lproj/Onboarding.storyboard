@@ -119,7 +119,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tek-2H-EIU"/>
-                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="k3w-Qc-kgS" firstAttribute="leading" secondItem="Tek-2H-EIU" secondAttribute="leading" id="ItP-ZT-hvJ"/>
                             <constraint firstItem="k3w-Qc-kgS" firstAttribute="top" secondItem="Tek-2H-EIU" secondAttribute="top" id="ZJm-kC-6Bo"/>
@@ -446,7 +446,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7VG-kG-Pfr"/>
-                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7VG-kG-Pfr" firstAttribute="trailing" secondItem="Rwr-N2-A7i" secondAttribute="trailing" id="0TB-L4-AgA"/>
                             <constraint firstItem="AdZ-2x-UOP" firstAttribute="leading" secondItem="hwc-A7-kYs" secondAttribute="leadingMargin" id="1RX-8Z-9DP"/>
@@ -617,7 +617,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="51D-ru-wlB"/>
-                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="N3D-qn-AoF" firstAttribute="trailing" secondItem="PXj-CY-8Sv" secondAttribute="trailingMargin" id="0Mt-l7-jU3"/>
                             <constraint firstItem="N3D-qn-AoF" firstAttribute="leading" secondItem="PXj-CY-8Sv" secondAttribute="leadingMargin" id="4WV-Lz-D2w"/>
@@ -788,7 +788,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QoL-gp-zNE"/>
-                        <color key="backgroundColor" red="0.11981192979999999" green="0.17399033899999999" blue="0.22119075060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1185089573" green="0.1185325012" blue="0.1185038313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SNQ-jO-Qgi" firstAttribute="top" secondItem="QoL-gp-zNE" secondAttribute="top" id="6CI-5V-apw"/>
                             <constraint firstItem="QoL-gp-zNE" firstAttribute="bottom" secondItem="Svj-VY-heV" secondAttribute="bottom" constant="20" id="HcQ-sf-cxV"/>

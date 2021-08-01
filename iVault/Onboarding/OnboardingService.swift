@@ -46,7 +46,7 @@ public class OnboardingService: OnboardingServiceProtocol {
     }
     
     public func hasWallet(withWalletName walletName: String) -> Bool {
-        let _todo = "check for wallet with given name"
+        //@@TODO  "check for wallet with given name"
         return self.propertyStore.onboardingIsFinished
     }
     
