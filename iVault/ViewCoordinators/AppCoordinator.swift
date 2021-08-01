@@ -57,7 +57,14 @@ public class AppCoordinator: Coordinator {
     }
     
     public func start() {
-        self.handleLegal()
+        let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil)
+        let vc = launchScreen.instantiateViewController(withIdentifier: "LaunchScreen")
+        self.navigationController.pushViewController(vc, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.navigationController.popToRootViewController(animated: true)
+            self.handleLegal()
+        }
+//        self.handleLegal()
     }
 
     private func startWallet() {
@@ -166,7 +173,7 @@ extension AppCoordinator: LegalVCDelegate {
     }
 
     public func legalVCDeclineButtonTouched(viewController: LegalVC) {
-        let alert = UIAlertController.init(title: "Scala iVault",
+        let alert = UIAlertController.init(title: "Scala Vault",
                                            message: self.localizer.localized("legal.decline.text"),
                                            preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: self.localizer.localized("global.ok"),

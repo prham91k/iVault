@@ -119,20 +119,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: WCSessionDelegate {
 
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("*** phone: WC Session did become inactive")
+        Debug.print(s:"*** phone: WC Session did become inactive")
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
-        print("*** phone: WC Session did deactivate")
+        Debug.print(s:"*** phone: WC Session did deactivate")
         WCSession.default.activate()
     }
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if let error = error {
-            print("*** phone: WC Session activation failed with error: \(error.localizedDescription)")
+            Debug.print(s:"*** phone: WC Session activation failed with error: \(error.localizedDescription)")
             return
         }
-        print("*** phone: WC Session activated with state: \(activationState.rawValue)")
+        Debug.print(s:"*** phone: WC Session activated with state: \(activationState.rawValue)")
     }
 
     private func setupWatchConnectivity() {
@@ -161,10 +161,10 @@ extension AppDelegate: WCSessionDelegate {
 
 
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("*** phone: received application context: \(applicationContext)")
+        Debug.print(s:"*** phone: received application context: \(applicationContext)")
 
         if let requestId = applicationContext[ApplicationContextTag.requestId.rawValue] as? String {
-            print("*** phone: receive requestId: \(requestId)")
+            Debug.print(s:"*** phone: receive requestId: \(requestId)")
         }
     }
 }
