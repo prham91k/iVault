@@ -164,7 +164,7 @@ extension Wallet: WalletProtocol {
     }
     
     public var height: UInt64 {
-        return monero_getBlockchainHeight();
+        return monero_getDaemonBlockChainHeight();
     }
 
     private static var initialHeight: UInt64 = 0
