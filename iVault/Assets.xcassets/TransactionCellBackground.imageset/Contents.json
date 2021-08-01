@@ -1,8 +1,22 @@
 {
   "images" : [
     {
+      "filename" : "TransactionCellBackground.png",
       "idiom" : "universal",
-      "filename" : "TransactionCellBackground.pdf",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 17,
+          "left" : 29,
+          "right" : 31,
+          "top" : 18
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
       "scale" : "1x"
     },
     {
@@ -15,8 +29,8 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   },
   "properties" : {
     "preserves-vector-representation" : true
