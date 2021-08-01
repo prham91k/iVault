@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol ReceipientVCDelegate: class {
+protocol ReceipientVCDelegate: AnyObject {
     func receipientVCBackTouched()
     func receipientVCScanQRCodeTouched()
     func receipientVCPasteFromClipboardTouched(viewController: ReceipientVC)
