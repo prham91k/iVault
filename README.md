@@ -2,6 +2,7 @@
 
 A secure and light weight wallet to store your Scala coins on ios device.
 
+<img src="docs/splash.png" alt="splash" width="200px" /><img src="docs/new.png" alt="new" width="200px" /><img src="docs/wallet.png" alt="wallet" width="200px"/>
 
 ## Features		
 * Subaddress Support
