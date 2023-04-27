@@ -11,6 +11,7 @@ A secure and light weight wallet to store your Scala coins on ios device.
 
 ## Credits
 * Forked from [XWallet](docs/xwallet.md).
+* Market data provided by CoinGecko through their Market API (https://www.coingecko.com/en/api)
 
 ## Contacts
 * [Website](https://scalaproject.io/)
