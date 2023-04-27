@@ -10,7 +10,7 @@ import Foundation
 
 extension Double {
     
-    private static let exactNumberOfFractionDigits = 2
+    private static let exactNumberOfFractionDigits = 9
 
     public func toXMR() -> UInt64? {
         if self >= Double(UInt64.min) && self * Double(Constants.atomicUnitsPerMonero) < Double(UInt64.max) {

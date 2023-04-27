@@ -30,9 +30,18 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>node.moneroworld.com</key>
+			<key>remote.one.scalaproject.io</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>remote.two.scalaproject.io</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
 		</dict>

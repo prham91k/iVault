@@ -45,7 +45,29 @@ public struct TransactionItem {
             totalInAtomicUnits = self.amount
         } else {
             // when no longer pending then the total amount spent is the sum of amount and network fee
-            totalInAtomicUnits = self.amount + self.networkFee
+            do{
+                if((UInt64.max - self.amount) < self.networkFee) {
+                    Debug.print(s: "Huge Amount : \(self.amount) Fee : \(self.networkFee)")
+                    totalInAtomicUnits = self.amount
+                } else {
+                    totalInAtomicUnits = self.amount + self.networkFee
+                }
+            } catch let error as NSDecimalNumber.CalculationError {
+                // Code to execute if an arithmetic overflow error was thrown
+                Debug.print(s: "Arithmetic overflow error: \(error)")
+            } catch let error as FloatingPoint where error.isNaN {
+                // Code to execute if a floating point error (NaN) was thrown
+                Debug.print(s: "Floating point error: NaN")
+                totalInAtomicUnits = 0
+            } catch let error as FloatingPoint where error.isInfinite {
+                // Code to execute if a floating point error (infinity) was thrown
+                Debug.print(s: "Floating point error: Infinity")
+                totalInAtomicUnits = 0
+            } catch {
+                // Code to execute if an error of a different type was thrown
+                Debug.print(s: "Error: \(error)")
+                totalInAtomicUnits = 0
+            }
         }
             
 //        let floatAmount: Double = Double(totalInAtomicUnits) / 1e12

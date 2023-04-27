@@ -39,7 +39,7 @@ public class WalletCoordinator: Coordinator {
     private var feeService: FeeServiceProtocol
     private var moneroUriParser: MoneroUriParserProtocol
     private var localizer: Localizable
-
+    private var cachedWalletViewModel : WalletViewModel?
     private let navigationController: UINavigationController
     public var childCoordinators: [Coordinator] = []
 
@@ -74,12 +74,13 @@ public class WalletCoordinator: Coordinator {
         self.feeService = feeService
         self.moneroUriParser = moneroUriParser
         self.localizer = localizer
+        self.cachedWalletViewModel = nil
     }
     
     func start() {
         self.showWalletViewController()
         self.startFiatUpdates()
-        self.startFeeEstimationUpdates()
+//        self.startFeeEstimationUpdates()
     }
     
     private func showWalletViewController() {
@@ -91,21 +92,32 @@ public class WalletCoordinator: Coordinator {
     }
     
     private func getWalletViewModel() -> WalletViewModel? {
+        
         guard let wallet = self.moneroBag.wallet  else {
             return nil
         }
-        
+        let height = UInt64(self.moneroBag.wallet?.height ?? 0)
         let xmrBalance = CoinFormatter.format(atomicAmount: wallet.balance,
                                              numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
+        let cached = self.cachedWalletViewModel
+
+        if(cached?.blockChainHeight == height && cached?.xmrAmount == xmrBalance) {
+            return cached
+        }
+        
+        
         let unlockBalance = CoinFormatter.format(atomicAmount: wallet.unlockedBalance,
                                                  numberOfFractionDigits: Constants.prettyPrintNumberOfFractionDigits)
         
         let history = wallet.history
         
+        
         let lockAmount = wallet.balance - wallet.unlockedBalance
         let hasLockedBalance = (lockAmount <= Constants.atomicUnitsPerMonero)
-        let height = Double(self.moneroBag.wallet?.height ?? 0)
-        Debug.print(s: "Have locked balance \(lockAmount) at height : \(height)")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "Y-MM-dd hh:mm:ss"
+        let dateString = dateFormatter.string(from: Date())
+        Debug.print(s: "[\(dateString)] Have unlocked : \( wallet.unlockedBalance) | balance  : \(wallet.balance) at height : \(height)")
         
         let walletViewModel = WalletViewModel(xmrAmount: xmrBalance,
                                               otherAmount: self.otherAmount(forXMRValue: self.moneroBag.wallet?.balance),
@@ -119,9 +131,10 @@ public class WalletCoordinator: Coordinator {
                                               sendButtonTitle: self.localizer.localized("walletView.button.send"),
                                               receiveButtonTitle: self.localizer.localized("walletView.button.receive"),
                                               emptyTransactionsText: self.localizer.localized("walletView.emptyInformation"),
-                                              blockChainHeight: self.moneroBag.wallet?.height ?? 0
-                                              )
-        wallet.refreshWallet();
+                                              blockChainHeight: self.moneroBag.wallet?.height ?? 0,
+                                              networkHeight: self.moneroBag.wallet?.networkHeight ?? 0)
+//        wallet.refreshWallet();
+        self.cachedWalletViewModel = walletViewModel
         return walletViewModel
     }
     
@@ -136,8 +149,9 @@ public class WalletCoordinator: Coordinator {
             return "---"
         case let .value(.recent, amount):
             return "\(amount.toCurrency())"
-        case let .value(age, amount):
-            return "\(amount.toCurrency()) [\(self.localizer.localized(age))]"
+        case let .value(_, amount):
+            return "\(amount.toCurrency())"
+//            return "\(amount.toCurrency()) [\(self.localizer.localized(age))]"
         }
     }
     
@@ -151,6 +165,7 @@ public class WalletCoordinator: Coordinator {
     }
     
     private func fiatValueUpdated() {
+        self.cachedWalletViewModel = nil
         let vm = self.getWalletViewModel()
         DispatchQueue.main.async {
             self.walletVC.viewModel = vm
@@ -159,12 +174,12 @@ public class WalletCoordinator: Coordinator {
     }
     
     private func startFeeEstimationUpdates() {
-        self.feeService.startUpdating(withIntervalInSeconds: Constants.feeUpdateIntervalInSeconds,
-                                                notificationHandler: {} )
+//        self.feeService.startUpdating(withIntervalInSeconds: Constants.feeUpdateIntervalInSeconds,
+//                                                notificationHandler: {} )
     }
     
     private func stopFeeEstimationUpdates() {
-        self.feeService.stopUpdating()
+//        self.feeService.stopUpdating()
     }
     
     private func showReceiveViewController() {

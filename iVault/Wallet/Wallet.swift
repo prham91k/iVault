@@ -34,6 +34,8 @@ public protocol WalletProtocol {
     var unlockedBalance: UInt64 { get }
     var history: TransactionHistory { get }
     var height: UInt64 { get }
+    var networkHeight: UInt64 { get }
+    func rescan()
 }
 
 
@@ -101,7 +103,7 @@ extension Wallet: WalletProtocol {
     private func getUpdatedHistory() -> TransactionHistory {
         let transactionHistory = TransactionHistory()
         
-        guard let moneroHistory = monero_getTrxHistory() else { return transactionHistory }
+        guard let moneroHistory = monero_getTrxHistory(Wallet.maxTransactionRecords) else { return transactionHistory }
         guard let transactions = moneroHistory.pointee.transactions else { return transactionHistory }
         let numberOfTransactions = moneroHistory.pointee.numberOfTransactions
         
@@ -163,11 +165,22 @@ extension Wallet: WalletProtocol {
         }
     }
     
-    public var height: UInt64 {
-        return monero_getDaemonBlockChainHeight();
+    public var networkHeight: UInt64 {
+        return monero_getDaemonBlockChainHeight()
     }
+    
+    public var height: UInt64 {
+        return monero_getBlockchainHeight()
+    }
+    
+    public static var maxTransactionRecords: UInt64 = 0;
 
     private static var initialHeight: UInt64 = 0
+    
+    public func rescan() {
+        monero_rescan()
+//        self.refreshWallet()
+    }
 }
 
 

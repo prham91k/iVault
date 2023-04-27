@@ -26,7 +26,7 @@ public class Constants {
 //    public static let prettyPrintNumberOfFractionDigits = 2
     public static let prettyPrintNumberOfFractionDigits = 2
     
-    public static let mixinCount: UInt32 = 2
+    public static let mixinCount: UInt32 = 11
     public static let defaultTransactionPriority = PendingTransactionPriority_Low
     
     public static let numberOfRequiredConfirmations: UInt64 = 30
@@ -39,12 +39,11 @@ public class Constants {
     
     public static let donationWalletAddress = "Ssy2HXpWZ9RhXbb9uNFTeHjaYfexa3suDbGJDSfUWSEpSajSmjQXwLh2xqCAAUQfZrdiRkvpUZvBceT8d6zKc6aV9NaZVYXFsY"
     public static let feedbackEmail = "hello@scalaproject.io"
-    
-    public static let fiatProviderUri = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=XLA&tsyms=%@"
-    public static let fiatUpdateIntervalInSeconds = 120
-    
-    public static let feeProviderUri = "http://nodes.scalaproject.io:11812/json_rpc"
-    public static let feeUpdateIntervalInSeconds = 60
+
+    public static let fiatUpdateIntervalInSeconds = 3600
+    public static let feeUpdateIntervalInSeconds = 300
+
+    public static let feeProviderUri = "http://remote.one.scalaproject.io:11812/json_rpc"
     public static let estimatedMessageSizeInKB: Int = 13
 
     public static let troubleShootingLink = "https://github.com/scala-network/iVault/blob/main/docs/xwallet.md#troubleshooting"

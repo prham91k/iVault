@@ -18,6 +18,8 @@ protocol SettingsVCProtocol: AnyObject {
     func settingsVC2FASupportButtonTouched()
     func settingsVCSelectNodeButtonTouched()
     func settingsVCNukeXWalletButtonTouched()
+    func settingsVCRescanWalletButtonTouched()
+    func settingsVCMaxTrxHistoryButtonTouched()
 }
 
 
@@ -55,6 +57,12 @@ struct SettingsViewModel {
     public var emailFailedTitle: String?
     public var emailFailedMessage: String?
     public var ok: String?
-
+    public var rescanWalletCellTitle: String?
+    public var rescanWalletCellSubTitle: String?
+    public var rescanWalletCellButtonTitle: String?
+    public var maxTrxHistoryCellTitle: String?
+    public var maxTrxHistoryCellInput: String?
+    public var maxTrxHistoryCellButtonTitle: String?
+    
     public weak var delegate: SettingsVCProtocol?
 }

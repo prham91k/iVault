@@ -62,6 +62,8 @@ class SettingsVC: UIViewController {
         case actionCell = "ActionCell"
         case actionCellWithSubTitle = "ActionCellWithSubTitle"
         case warningCellWithSubTitle = "WarningCellWithSubTitle"
+        case actionCellWithInput = "ActionCellWithInput"
+
     }
     
     private var cellDefinitions: [Int:(cell:UITableViewCell, height:Int, action:(() -> Void)?)] {
@@ -72,9 +74,11 @@ class SettingsVC: UIViewController {
                     3: (changePinCell, 122, nil),
 //                    4: (tfaSupportCell, 122, nil),
                     4: (selectNodeCell, 142, nil),
-                    5: (feedbackCell, 122, nil),
-                    6: (nukeXWalletCell, 142, nil),
-                    7: (privacyCell, 122, nil)
+                    5: (rescanWalletCell,142, nil),
+//                    6: (maxTrxHistoryCell,142, nil),
+                    6: (feedbackCell, 122, nil),
+                    7: (nukeXWalletCell, 142, nil),
+                    8: (privacyCell, 122, nil)
            ]
         }
     }
@@ -181,6 +185,56 @@ class SettingsVC: UIViewController {
         }
     }
     
+    private var rescanWalletCell: UITableViewCell {
+        get {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: CellIdentifier.actionCellWithSubTitle.rawValue)
+                as! ActionCellWithSubTitle
+            if let cellTitle = self.viewModel.rescanWalletCellTitle {
+                cell.cellTitle = cellTitle
+            }
+            if let subTitle = self.viewModel.rescanWalletCellSubTitle {
+                cell.cellSubTitle = subTitle
+            }
+            if let buttonTitle = self.viewModel.rescanWalletCellButtonTitle {
+                cell.buttonTitle = buttonTitle
+            }
+            
+            cell.buttonTouchedHandler = { () in
+                cell.buttonTouchedHandler = self.viewModel.delegate?.settingsVCRescanWalletButtonTouched
+                self.dismiss(animated: true, completion: nil)
+            }
+            cell.redraw()
+            return cell
+        }
+    }
+    
+    private var maxTrxHistoryCell: UITableViewCell {
+        get {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: CellIdentifier.actionCellWithInput.rawValue)
+                as! ActionCellWithInput
+            
+            if let cellTitle = self.viewModel.maxTrxHistoryCellTitle {
+                cell.cellTitle = cellTitle
+            }
+            if let subTitle = self.viewModel.maxTrxHistoryCellInput {
+                cell.cellInput = subTitle
+            }
+            if let buttonTitle = self.viewModel.maxTrxHistoryCellButtonTitle {
+                cell.buttonTitle = buttonTitle
+            }
+            
+            cell.cellInputField.delegate = self
+            
+            cell.buttonTouchedHandler = { () in
+                self.viewModel.delegate?.settingsVCMaxTrxHistoryButtonTouched()
+                self.dismiss(animated: true, completion: nil)
+            }
+            cell.redraw()
+            
+            return cell
+        }
+    }
+    
     private var nukeXWalletCell: UITableViewCell {
         get {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: CellIdentifier.warningCellWithSubTitle.rawValue)
@@ -237,6 +291,13 @@ class SettingsVC: UIViewController {
     }
 }
 
+extension SettingsVC: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+}
 
 extension SettingsVC: MFMailComposeViewControllerDelegate {
 

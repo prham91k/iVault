@@ -58,7 +58,7 @@ class WalletVC: UIViewController {
     private var receiveButtonGestureRecognizer = UITapGestureRecognizer()
     
     private var syncIsInProgress = false
-    private var hasLockedBalance = false
+    private var hasUnlockedBalance = false
 
     public func refresh() {
         self.updateControls()
@@ -68,7 +68,19 @@ class WalletVC: UIViewController {
 //        print("############# updating view due to updated viewmodel, triggered by listener")
         self.showData()
         
-        self.hasLockedBalance = self.viewModel?.hasLockedBalance ?? false
+//        self.hasUnlockedBalance = self.viewModel?.hasLockedBalance ?? false
+//        if(self.hasUnlockedBalance) {
+        
+        
+        if self.viewModel!.blockChainHeight > 0,
+            let unlockBalance: String = self.viewModel?.unlockBalance,
+            let decimalValue = Decimal(string: unlockBalance),
+           (decimalValue > 0){
+            self.hasUnlockedBalance = true
+        } else {
+            self.hasUnlockedBalance = false;
+        }
+
         self.updateSendButtons()
     }
 
@@ -221,7 +233,7 @@ class WalletVC: UIViewController {
     }
     
     private func updateSendButtons() {
-        if self.hasLockedBalance || self.syncIsInProgress {
+        if !self.hasUnlockedBalance || self.syncIsInProgress {
             self.disableSendButton()
         } else {
             self.enableSendButton()

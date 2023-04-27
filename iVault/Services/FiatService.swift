@@ -20,7 +20,7 @@ public protocol FiatServiceProtocol {
 
 public class FiatService: FiatServiceProtocol {
     
-    private let fiatProvider: FiatProviderProtocol
+    private let marketProvider: MarketProviderProtocol
     private let dateProvider: DateProviderProtocol
     private var propertyStore: PropertyStoreProtocol
     
@@ -28,11 +28,11 @@ public class FiatService: FiatServiceProtocol {
     private var timer: Timer?
     private var notificationHandler: (() -> Void)?
     
-    public init(fiatProvider: FiatProviderProtocol,
+    public init(marketProvider: MarketProviderProtocol,
                 dateProvider: DateProviderProtocol,
                 propertyStore: PropertyStoreProtocol)
     {
-        self.fiatProvider = fiatProvider
+        self.marketProvider = marketProvider
         self.dateProvider = dateProvider
         self.propertyStore = propertyStore
     }
@@ -71,7 +71,7 @@ public class FiatService: FiatServiceProtocol {
         let xmr = Double(xmrValue) / Double(Constants.atomicUnitsPerMonero)
         let fiatValue = xmr * fiatFactor
         let age = self.ageFor(updateDate)
-        
+    
         return FiatEquivalent.value(age: age, amount: fiatValue)
     }
     
@@ -111,7 +111,7 @@ public class FiatService: FiatServiceProtocol {
     }
     
     private func queryFiatFactor() {
-        self.fiatProvider.getFiatEquivalent(
+        self.marketProvider.getFiatEquivalent(
             forCurrency: self.propertyStore.currency,
             completionHandler: { factor,currency  in self.fiatFactorReceived(factor, forCurrency: currency) },
             failedHandler: { () in self.fiatFactorReceiveFailed() })

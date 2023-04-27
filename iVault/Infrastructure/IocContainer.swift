@@ -75,7 +75,7 @@ public class IocContainer: IocContainerProtocol {
     }()
 
     public lazy var fiatService: FiatServiceProtocol = {
-        let fiatService = FiatService(fiatProvider: self.fiatProvider,
+        let fiatService = FiatService(marketProvider: self.marketProvider,
                                       dateProvider: self.dateProvider,
                                       propertyStore: IocContainer.propertyStore)
         return fiatService
@@ -103,9 +103,11 @@ public class IocContainer: IocContainerProtocol {
     }()
 
 
-    private lazy var fiatProvider: FiatProviderProtocol = {
-        let fiatProvider = FiatProvider()
-        return fiatProvider
+    private lazy var marketProvider: MarketProviderProtocol = {
+//        let fiatProvider = FiatProvider()
+        let marketProvider = CoinGeckoMarket()
+//        let marketProvide = CryptoCompareMarket()
+        return marketProvider
     }()
     
     private lazy var feeProvider: FeeProviderProtocol = {

@@ -21,6 +21,9 @@
 		5CC2508B2658C31900B67102 /* libboost_serialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC2507E2658C31900B67102 /* libboost_serialization.a */; };
 		5CC2508C2658C31900B67102 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC2507F2658C31900B67102 /* libboost_thread.a */; };
 		5CC2508D2658C31900B67102 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC250802658C31900B67102 /* libboost_filesystem.a */; };
+		5CCFC27229F824F40090D645 /* CryptoCompareMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFC27129F824F40090D645 /* CryptoCompareMarket.swift */; };
+		5CCFC27429F826A40090D645 /* CoinGeckoMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFC27329F826A40090D645 /* CoinGeckoMarket.swift */; };
+		5CCFC27629F9B08F0090D645 /* ActionCellWithInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCFC27529F9B08F0090D645 /* ActionCellWithInput.swift */; };
 		5CEDC88626A89DCC00887A47 /* libunbound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC88526A89DCC00887A47 /* libunbound.a */; };
 		5CEDC88A26A89DF600887A47 /* libepee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC88726A89DF600887A47 /* libepee.a */; };
 		5CEDC88B26A89DF600887A47 /* liblmdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC88826A89DF600887A47 /* liblmdb.a */; };
@@ -31,6 +34,8 @@
 		5CEDC89526A89EA500887A47 /* libeasylogging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC89426A89EA500887A47 /* libeasylogging.a */; };
 		5CEDC89726A89EAE00887A47 /* liblmdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC89626A89EAE00887A47 /* liblmdb.a */; };
 		5CEDC89926A89EF700887A47 /* libunbound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEDC89826A89EF700887A47 /* libunbound.a */; };
+		5CFF7C4629EF381A00BA3261 /* libfelidae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFF7C4529EF381A00BA3261 /* libfelidae.a */; };
+		5CFF7C4829EF382600BA3261 /* librandomx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFF7C4729EF382600BA3261 /* librandomx.a */; };
 		EE0A6F9920552C6500682F12 /* FiatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6F9820552C6500682F12 /* FiatService.swift */; };
 		EE0A6F9B2055335B00682F12 /* FiatServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6F9A2055335B00682F12 /* FiatServiceTest.swift */; };
 		EE0A6F9E205BDA0800682F12 /* FiatAgeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A6F9D205BDA0800682F12 /* FiatAgeTest.swift */; };
@@ -87,7 +92,7 @@
 		EE5D01AB1F436FCC00E41AED /* moneroWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE5D01A91F436FCC00E41AED /* moneroWrapper.cpp */; };
 		EE6729141FF6ED6C0064951D /* ActivityIndicatorHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6729131FF6ED6C0064951D /* ActivityIndicatorHUD.swift */; };
 		EE6D88632064F758003B9149 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D88622064F758003B9149 /* Fiat.swift */; };
-		EE6D88652064F7D7003B9149 /* FiatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D88642064F7D7003B9149 /* FiatProvider.swift */; };
+		EE6D88652064F7D7003B9149 /* MarketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D88642064F7D7003B9149 /* MarketProvider.swift */; };
 		EE6D88672064F811003B9149 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D88662064F811003B9149 /* DateProvider.swift */; };
 		EE737AAE20149B810069F341 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE737AAC20149B810069F341 /* Settings.storyboard */; };
 		EE737AB22014CB290069F341 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE737AB12014CB290069F341 /* SettingsVC.swift */; };
@@ -196,6 +201,9 @@
 		5CC2507E2658C31900B67102 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_serialization.a; path = "iVault/external-libs/boost/libboost_serialization.a"; sourceTree = "<group>"; };
 		5CC2507F2658C31900B67102 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = "iVault/external-libs/boost/libboost_thread.a"; sourceTree = "<group>"; };
 		5CC250802658C31900B67102 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "iVault/external-libs/boost/libboost_filesystem.a"; sourceTree = "<group>"; };
+		5CCFC27129F824F40090D645 /* CryptoCompareMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareMarket.swift; sourceTree = "<group>"; };
+		5CCFC27329F826A40090D645 /* CoinGeckoMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoMarket.swift; sourceTree = "<group>"; };
+		5CCFC27529F9B08F0090D645 /* ActionCellWithInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCellWithInput.swift; sourceTree = "<group>"; };
 		5CE191882675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/2FA.storyboard; sourceTree = "<group>"; };
 		5CE191892675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Configure2FA.storyboard; sourceTree = "<group>"; };
 		5CE1918A2675C00B008348D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -216,6 +224,8 @@
 		5CEDC89426A89EA500887A47 /* libeasylogging.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeasylogging.a; path = "iVault/external-libs/monero_v0.15/libeasylogging.a"; sourceTree = "<group>"; };
 		5CEDC89626A89EAE00887A47 /* liblmdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblmdb.a; path = "iVault/external-libs/monero_v0.15/liblmdb.a"; sourceTree = "<group>"; };
 		5CEDC89826A89EF700887A47 /* libunbound.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libunbound.a; path = "iVault/external-libs/monero_v0.15/libunbound.a"; sourceTree = "<group>"; };
+		5CFF7C4529EF381A00BA3261 /* libfelidae.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfelidae.a; path = "iVault/external-libs/monero_v0.15/libfelidae.a"; sourceTree = "<group>"; };
+		5CFF7C4729EF382600BA3261 /* librandomx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librandomx.a; path = "iVault/external-libs/monero_v0.15/librandomx.a"; sourceTree = "<group>"; };
 		EE0A6F9820552C6500682F12 /* FiatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatService.swift; sourceTree = "<group>"; };
 		EE0A6F9A2055335B00682F12 /* FiatServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatServiceTest.swift; sourceTree = "<group>"; };
 		EE0A6F9D205BDA0800682F12 /* FiatAgeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatAgeTest.swift; sourceTree = "<group>"; };
@@ -279,7 +289,7 @@
 		EE5D01AA1F436FCC00E41AED /* moneroWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = moneroWrapper.h; path = MoneroLib/moneroWrapper.h; sourceTree = "<group>"; };
 		EE6729131FF6ED6C0064951D /* ActivityIndicatorHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorHUD.swift; sourceTree = "<group>"; };
 		EE6D88622064F758003B9149 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
-		EE6D88642064F7D7003B9149 /* FiatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatProvider.swift; sourceTree = "<group>"; };
+		EE6D88642064F7D7003B9149 /* MarketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProvider.swift; sourceTree = "<group>"; };
 		EE6D88662064F811003B9149 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		EE737AB12014CB290069F341 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		EE737AB32014D37B0069F341 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -482,6 +492,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFF7C4629EF381A00BA3261 /* libfelidae.a in Frameworks */,
 				5CEDC88B26A89DF600887A47 /* liblmdb.a in Frameworks */,
 				5CEDC88C26A89DF600887A47 /* libeasylogging.a in Frameworks */,
 				5CC250812658C31900B67102 /* libboost_date_time.a in Frameworks */,
@@ -501,6 +512,8 @@
 				5CC2508D2658C31900B67102 /* libboost_filesystem.a in Frameworks */,
 				5CEDC89726A89EAE00887A47 /* liblmdb.a in Frameworks */,
 				5CC250732658C29600B67102 /* librandomx.a in Frameworks */,
+				5CFF7C4829EF382600BA3261 /* librandomx.a in Frameworks */,
+				5CFF7C4629EF381A00BA3261 /* libfelidae.a in Frameworks */,
 				5CEDC88A26A89DF600887A47 /* libepee.a in Frameworks */,
 				EEACB446224D60F800A672FF /* libsodium.a in Frameworks */,
 				EEACB443224D60E900A672FF /* libssl.a in Frameworks */,
@@ -527,9 +540,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CCFC27029F824BD0090D645 /* Markets */ = {
+			isa = PBXGroup;
+			children = (
+				5CCFC27129F824F40090D645 /* CryptoCompareMarket.swift */,
+				5CCFC27329F826A40090D645 /* CoinGeckoMarket.swift */,
+			);
+			path = Markets;
+			sourceTree = "<group>";
+		};
 		5CEDC88F26A89E6500887A47 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				5CFF7C4729EF382600BA3261 /* librandomx.a */,
+				5CFF7C4529EF381A00BA3261 /* libfelidae.a */,
 				5CEDC88826A89DF600887A47 /* liblmdb.a */,
 				5CEDC88926A89DF600887A47 /* libeasylogging.a */,
 				5CEDC88D26A89E1200887A47 /* libwallet_merged.a */,
@@ -592,6 +616,7 @@
 				EE737AC52016686F0069F341 /* SingleSelectionCell.swift */,
 				EE737ABB20153AD70069F341 /* WarningCellWithSubTitle.swift */,
 				EED5F5532129718D00CAA82C /* Enable2FACell.swift */,
+				5CCFC27529F9B08F0090D645 /* ActionCellWithInput.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1574,10 +1599,11 @@
 		EEFD67181FC4C2C40011D409 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5CCFC27029F824BD0090D645 /* Markets */,
 				EE6D88662064F811003B9149 /* DateProvider.swift */,
 				EE529454209891E0009D7B6B /* FeeProvider.swift */,
 				EE5294582098AB97009D7B6B /* FeeService.swift */,
-				EE6D88642064F7D7003B9149 /* FiatProvider.swift */,
+				EE6D88642064F7D7003B9149 /* MarketProvider.swift */,
 				EE0A6F9820552C6500682F12 /* FiatService.swift */,
 				EE392476202CFBDE00266B29 /* KeychainWrapper.swift */,
 				EE39247A202E2B5F00266B29 /* PasswordGenerator.swift */,
@@ -1726,7 +1752,7 @@
 			files = (
 				EEFD670F1FC1EE9D0011D409 /* WalletViewModel.swift in Sources */,
 				EE0A6F9920552C6500682F12 /* FiatService.swift in Sources */,
-				EE6D88652064F7D7003B9149 /* FiatProvider.swift in Sources */,
+				EE6D88652064F7D7003B9149 /* MarketProvider.swift in Sources */,
 				EE76C8A91FE67DDB0075C45D /* Payment.swift in Sources */,
 				EE737AC4201666F20069F341 /* SingleSelectionTableViewVC.swift in Sources */,
 				EE47CA351FBCB09000FC98E9 /* LoginCoordinator.swift in Sources */,
@@ -1754,8 +1780,10 @@
 				EE5D013A1F3721DE00E41AED /* IocContainer.swift in Sources */,
 				EE947FD621120CC000D6F1D0 /* NotificationService.swift in Sources */,
 				EE3E38531F93A30C001F8140 /* SeedVC.swift in Sources */,
+				5CCFC27629F9B08F0090D645 /* ActionCellWithInput.swift in Sources */,
 				EE737ABC20153AD70069F341 /* WarningCellWithSubTitle.swift in Sources */,
 				EED5F5582131F73900CAA82C /* UIColor-Extension.swift in Sources */,
+				5CCFC27429F826A40090D645 /* CoinGeckoMarket.swift in Sources */,
 				EE3E385A1F93E12A001F8140 /* PinVC.swift in Sources */,
 				EE1831D81FD09BFB0072C149 /* WalletLifecycleService.swift in Sources */,
 				EE43E8EE1F65E62F00AE5161 /* HttpError.swift in Sources */,
@@ -1770,6 +1798,7 @@
 				EE5D013D1F37223D00E41AED /* Wallet.swift in Sources */,
 				EE43E8EF1F65E62F00AE5161 /* UnknownError.swift in Sources */,
 				EE7692D221209BA2008938E6 /* Configure2FAVC.swift in Sources */,
+				5CCFC27229F824F40090D645 /* CryptoCompareMarket.swift in Sources */,
 				EEDA17371FB8C80600998BE1 /* FileHandling.swift in Sources */,
 				EEFD67111FC1F53D0011D409 /* TransactionCell.swift in Sources */,
 				EEF096CD20650D6100012E82 /* Double-Extension.swift in Sources */,
@@ -2155,6 +2184,8 @@
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = iVault/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iVault;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2170,7 +2201,7 @@
 					"-IiVault/CLib/",
 					"-IiVault/CLib/epee/include",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.glancemy.ivault;
+				PRODUCT_BUNDLE_IDENTIFIER = io.scalaproject.ivault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
@@ -2194,6 +2225,8 @@
 				ENABLE_BITCODE = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = iVault/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iVault;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2209,7 +2242,7 @@
 					"-IiVault/CLib/",
 					"-IiVault/CLib/epee/include",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.glancemy.ivault;
+				PRODUCT_BUNDLE_IDENTIFIER = io.scalaproject.ivault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;

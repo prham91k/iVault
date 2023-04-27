@@ -101,6 +101,15 @@ public class SettingsCoordinator: Coordinator {
         viewModel.selectNodeCellTitle = self.localizer.localized("settingsView.selectNode.title")
         viewModel.selectNodeCellSubTitle = self.localizer.localized("settingsView.selectNode.subTitle")
         viewModel.selectNodeCellButtonTitle = self.localizer.localized("settingsView.selectNode.button")
+        
+        viewModel.rescanWalletCellTitle = self.localizer.localized("settingsView.rescanWallet.title")
+        viewModel.rescanWalletCellSubTitle = self.localizer.localized("settingsView.rescanWallet.subTitle")
+        viewModel.rescanWalletCellButtonTitle = self.localizer.localized("settingsView.rescanWallet.button")
+        
+        viewModel.maxTrxHistoryCellTitle = self.localizer.localized("settingsView.maxTrxHistory.title")
+        viewModel.maxTrxHistoryCellButtonTitle = self.localizer.localized("settingsView.maxTrxHistory.button")
+        
+        
         viewModel.nukeXWalletCellTitle = self.localizer.localized("settingsView.nukeXWallet.title")
         viewModel.nukeXWalletCellSubTitle = self.localizer.localized("settingsView.nukeXWallet.subTitle")
         viewModel.nukeXWalletCellButtonTitle = self.localizer.localized("settingsView.nukeXWallet.button")
@@ -231,6 +240,26 @@ extension SettingsCoordinator: SettingsVCProtocol {
 
     func settingsVCSelectNodeButtonTouched() {
         self.showSelectNodeViewController()
+    }
+    
+    func settingsVCRescanWalletButtonTouched() {
+        guard let wallet = self.moneroBag.wallet else { return }
+        let blockChainHeight: UInt64 = wallet.networkHeight
+        let walletHeight : UInt64 = wallet.height
+        
+        let difference = blockChainHeight.subtractingReportingOverflow(walletHeight)
+        let walletIsSynced = difference.overflow || difference.partialValue < 2_000
+        if(!walletIsSynced) {
+            Debug.print(s: "Wallet is not yet asynced")
+            return
+        }
+        
+        Debug.print(s: "Rescan wallet")
+        wallet.rescan()
+    }
+    
+    func settingsVCMaxTrxHistoryButtonTouched() {
+        Debug.print(s: "Setting Max History")
     }
     
     func settingsVCNukeXWalletButtonTouched() {

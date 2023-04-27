@@ -110,7 +110,7 @@ extern "C" {
 
     uint64_t monero_getBalance();
     uint64_t monero_getUnlockedBalance();
-    struct monero_history* monero_getTrxHistory();
+    struct monero_history* monero_getTrxHistory(uint64_t max_records);
     void monero_deleteHistory(struct monero_history* history);
     
     // Transactions
@@ -136,7 +136,8 @@ extern "C" {
     bool monero_isValidPaymentId(const char* paymentId);
     
     void monero_printBlockChainHeight();
-
+    void monero_setRefreshFromBlockHeight(uint64_t height);
+    void monero_rescan();
 #ifdef __cplusplus
 }
 #endif

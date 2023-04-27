@@ -76,7 +76,7 @@ private:
 
 static WalletListernerImplementation* monero_walletListener = nullptr;
 
-Scala::WalletManagerFactory::LogLevel monero_logLevel = Scala::WalletManagerFactory::LogLevel_4;
+Scala::WalletManagerFactory::LogLevel monero_logLevel = Scala::WalletManagerFactory::LogLevel_Silent;
 
 bool monero_createWalletFromScatch(const char* pathWithFileName,
                                    const char* password,
@@ -291,7 +291,7 @@ uint64_t monero_getDaemonBlockChainHeight() {
     return monero_wallet->daemonBlockChainHeight();
 }
 
-monero_history* monero_getTrxHistory() {
+monero_history* monero_getTrxHistory(uint64_t max_records) {
     monero_history *moneroHistory = new monero_history;
     moneroHistory->numberOfTransactions = 0;
 
@@ -299,18 +299,33 @@ monero_history* monero_getTrxHistory() {
         return moneroHistory;
     }
     
+
     Scala::TransactionHistory *history = monero_wallet->history();
     if (!history) {
         return moneroHistory;
     }
+    try{
+        history->refresh();
+    }catch(...){
+        return moneroHistory;
+    }
     
-    history->refresh();
-    
-    std::vector<Scala::TransactionInfo *> allTransactionInfo = history->getAll();
+    int historyCount = history->count();
+    std::vector<Scala::TransactionInfo *> allTransactionInfo;
+    if(max_records > 0 && historyCount > max_records){
+        for (int i = 0; i < max_records; ++i) {
+            Scala::TransactionInfo * historyInfo = history->transaction(i);
+            allTransactionInfo.push_back(historyInfo);
+        }
+    } else {
+        allTransactionInfo = history->getAll();
+    }
+
     moneroHistory->numberOfTransactions = allTransactionInfo.size();
+
     moneroHistory->transactions = new monero_trx*[moneroHistory->numberOfTransactions];
     
-    for (std::size_t i = 0; i < history->count(); ++i) {
+    for (std::size_t i = 0; i < moneroHistory->numberOfTransactions; ++i) {
         try{
             Scala::TransactionInfo *transactionInfo = allTransactionInfo[i];
             monero_trx *trx = new monero_trx;
@@ -436,7 +451,21 @@ void monero_commitPendingTransaction(int64_t key)
 }
 
 
+void monero_setRefreshFromBlockHeight(uint64_t height) {
+    if (!monero_wallet) {
+        return;
+    }
+    
+    return monero_wallet->setRefreshFromBlockHeight(height);
+}
 
+void monero_rescan(){
+    if (!monero_wallet) {
+        return;
+    }
+    monero_wallet->setRefreshFromBlockHeight(0);
+    monero_wallet->rescanBlockchainAsync();
+}
 
 
 

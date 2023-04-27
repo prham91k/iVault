@@ -4,7 +4,7 @@
   Created by loj on 03.03.19.
   Copyright © 2019 loj. All rights reserved. */
 
-"walletView.title" = " iVault";
+"walletView.title" = "iVAULT";
 
 "walletView.title.syncing" = "SYNCING";
 
@@ -365,3 +365,13 @@
 "newWalletView.keychainLost" = "The keychain for Scala iVault containing your secured PIN is no longer accessible. You need to create a new wallet or recover any previous.";
 
 "newWalletView.intro" = "Please choose either to create a new wallet or restore from seed";
+
+"settingsView.rescanWallet.title" = "Rescan Wallet";
+
+"settingsView.rescanWallet.subTitle" = "Perform a fresh scan of the blockchain";
+
+"settingsView.rescanWallet.button" = "Rescan";
+
+"settingsView.maxTrxHistory.title" = "Max Display Transaction History";
+
+"settingsView.maxTrxHistory.button" = "Set";
